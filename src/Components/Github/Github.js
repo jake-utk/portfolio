@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 
 const Github = () => {
+    const [projects, setProjects] = useState([])
+    const url = `https://api.github.com/users/jake-utk/repos`;
 
     useEffect(() => {
-        axios
+        axios.get(url).then(res => console.log(res))
     }, [])
 
 
     return (
-        <div>
+        <div className='github-repos'>
             
         </div>
     );
