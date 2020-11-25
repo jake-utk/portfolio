@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Hero from "../Hero/Hero"
+import "./Home.css"
 
 const Home = () => {
 	const [image, setImage] = useState();
