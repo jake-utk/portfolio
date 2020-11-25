@@ -12,12 +12,12 @@
 	height: 100%;
 	color: #f7f5fb;
 	font-family: sans-serif;
-	padding-top: 70px;
+	/* padding-top: 70px; */
 }
 
 a {
 	text-decoration: none;
-	color: blueviolet;
+	color: #5C9EAD
 }
 
 .lazy-loader {
@@ -28,23 +28,6 @@ footer {
 	padding-bottom: 20px;
 	text-align: center;
 }
-
-/* @media (hover: hover) {
-	a:hover {
-		text-decoration: underline;
-	}
-
-	.logo-header:hover,
-	.header-link:hover {
-		text-decoration: none;
-	}
-
-	button:hover,
-	input[type="button"]:hover,
-	input[type="submit"]:hover {
-		filter: brightness(1.1);
-	}
-} */
 
 .center {
 	display: flex;
@@ -123,8 +106,4 @@ textarea:focus {
 
 .rec-carousel {
 	width: 100%;
-}
-
-#quote {
-	font-size: 1.5rem;
 }
