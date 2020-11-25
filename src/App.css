@@ -29,7 +29,7 @@ footer {
 	text-align: center;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
 	a:hover {
 		text-decoration: underline;
 	}
@@ -44,7 +44,7 @@ footer {
 	input[type="submit"]:hover {
 		filter: brightness(1.1);
 	}
-}
+} */
 
 .center {
 	display: flex;
@@ -101,9 +101,9 @@ textarea:focus {
 
 .logo-header {
 	padding: 5px 10px 10px 10px;
+	font-size: 40px;
 	margin: 0;
-	/* color: white; */
-	background-color: #0e1418;
+	/* color: #F6AE2D; */
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -123,4 +123,8 @@ textarea:focus {
 
 .rec-carousel {
 	width: 100%;
+}
+
+#quote {
+	font-size: 1.5rem;
 }

@@ -38,7 +38,6 @@ const HeroCarousel = () => {
 				autoplay={true}
 				autoplayInterval={5000}
 				wrapAround={true}>
-				{/* <img className='hero-image' src='' alt='' /> */}
 				{testImages.map((background, index) => {
 					console.log("background", background);
 					return (

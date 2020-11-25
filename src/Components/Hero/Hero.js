@@ -8,7 +8,10 @@ const Hero = () => {
 				<HeroCarousel className='hero-box' />
 				<div className='container center hero-box stack'>
 					<div className='hero-text center'>
-						Jake Addis | Software Engineer | Nashville
+						<p id="quote" page-break-after='always'>
+							"The road to success is always under construction."
+						</p>
+						- Lily Tomlin
 					</div>
 				</div>
 			</div>

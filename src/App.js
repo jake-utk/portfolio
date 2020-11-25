@@ -5,13 +5,16 @@ import Home from "./Components/Home/Home";
 function App() {
 	return (
 		<div className='App'>
-			<header></header>
+			<div className='logo-header'>Jake Addis | Software Engineer</div>
 
 			<Home />
 
 			<footer>
-				Developed by <a href='https://github.com/jake-utk' target="_blank">Jake Addis</a> ©
-				2021. Please hire me!
+				Developed by{" "}
+				<a href='https://github.com/jake-utk' target='_blank'>
+					Jake Addis
+				</a>{" "}
+				© 2021. Please hire me!
 			</footer>
 		</div>
 	);
