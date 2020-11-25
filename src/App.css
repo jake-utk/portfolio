@@ -1,7 +1,39 @@
-body {
-  background-color: grey;
+/* COLORS
+
+    grey: #31393C
+    lightGrey: #93827F
+    white: #F7F5FB
+    orangeYellow: #F6AE2D
+    blueGrey: #5C9EAD
+
+*/
+
+
+.App {
+  height: 100%;
+  color: #f7f5fB;
+  font-family: sans-serif;
+  padding-top: 70px;
 }
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
 
 .lazy-loader {
   
+}
+
+.container {
+
+}
+
+
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }

@@ -18,7 +18,7 @@ const Home = () => {
 	return (
 		<div>
 			<h1>Jake Addis | Software Engineer | Nashville</h1>
-			<img src={image}></img>
+			<img src={image} className="headshot"></img>
 		</div>
 	);
 };
