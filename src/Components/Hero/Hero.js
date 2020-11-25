@@ -1,11 +1,18 @@
 import React from 'react';
+import HeroCarousel from '../HeroCarousel/HeroCarousel'
+import "./Hero.css"
 
 const Hero = () => {
     return (
-        <div>
-            Hero image here!
-        </div>
-    );
+			<div className='hero-container'>
+				<HeroCarousel className='hero-box' />
+				<div className='container center hero-box stack'>
+					<div className='hero-text center'>
+						Jake Addis | Software Engineer | Nashville
+					</div>
+				</div>
+			</div>
+		);
 };
 
 export default Hero;
