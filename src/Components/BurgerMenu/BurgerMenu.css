@@ -39,8 +39,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 /* General sidebar styles */
+/* ADJUST OPACITY OF BACKGROUND OF MENU HERE */
 .bm-menu {
-	background: #31393c00;
+	background: #31393c73;
 	padding: 0 10px 0 20px;
 	font-size: 1.15em;
 }
