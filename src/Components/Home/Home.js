@@ -19,13 +19,19 @@ const Home = () => {
 		<div>
 			<div className='home'>
 				<div className='home-text'>
-				<img src={image} className='headshot' alt='headshot image'></img>
-					<h2>React | Node.js | Express | MongoDB | JavaScript | CSS</h2>
-					<h2 id='title'>Thanks for checking out my profile.</h2>
+					<img src={image} className='headshot' alt='headshot image'></img>
+					<h1 id='beg'>Currently seeking full time position.</h1>
+					<h2 id='title'>
+						React | Node.js | Express | MongoDB | JavaScript | CSS
+					</h2>
+					<h3>Thanks for checking out my profile.</h3>
 					<h3>Who I Am:</h3>
 					<p>
-						A dynamic Full Stack Software Engineer with experience building projects in React.js, express, and node.  I'm also comfortable in python/django.  I am currently seeking a full time
-						position. I am prepared to begin immediately.  Are you looking to add a tenacious problem solver who flourishes in a team environment?  Let's talk!
+						A dynamic Full Stack Software Engineer with experience building
+						projects in React.js, express, and node. I'm also comfortable in
+						python/django. I am currently seeking a full time position. I am
+						prepared to begin immediately. Contact me ASAP to add a tenacious
+						problem solver who excels in a team environment to your project.
 					</p>
 					<h3>Another title here.</h3>
 					<p>
