@@ -20,11 +20,11 @@ function App() {
 						outerContainerId={"outer-container"}
 					/>
 					<div id='page-wrap'>
-						<div className='logo-header'>
+						{/* <div className='logo-header'>
 							<Link to='/resume' className='header-link'>
 								<h1>*CURRENTLY FOR HIRE*</h1>
 							</Link>
-						</div>
+						</div> */}
 						<div className='main'>
 							<Route path='/' exact component={Home} />
 							<Route path='/aboutme' component={AboutMe} />

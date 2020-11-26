@@ -6,12 +6,12 @@
 	height: 22px;
 	right: 25px;
 	top: 25px;
-	color: #F7F5FB !important;
+	color: #f7f5fb !important;
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-	background: #F7F5FB !important;
+	background: #f7f5fb !important;
 	opacity: 1 !important;
 }
 
@@ -26,7 +26,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-	background: #F7F5FB;
+	background: #f7f5fb;
 }
 
 /*
@@ -40,19 +40,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-	background: #31393C;
+	background: #31393c;
 	padding: 0 10px 0 20px;
 	font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-	fill: #93827F;
+	fill: #93827f;
 }
 
 /* Wrapper for item list */
 .bm-item-list {
-	color: #5C9EAD;
+	color: #5c9ead;
 	padding: 0.8em;
 }
 
@@ -70,7 +70,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item {
 	display: inline-block;
 	font-size: 22px;
-	color: #F7F5FB;
+	color: #f7f5fb;
 	margin-bottom: 10px;
 	text-align: left;
 	text-decoration: none;
@@ -78,7 +78,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item:hover {
-	color: #F6AE2D;
+	color: #f6ae2d;
 	text-decoration: none;
 }
 
