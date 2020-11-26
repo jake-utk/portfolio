@@ -12,7 +12,6 @@
 	height: 100%;
 	color: #f7f5fb;
 	font-family: sans-serif;
-	/* padding-top: 70px; */
 }
 
 a {
@@ -84,9 +83,8 @@ textarea:focus {
 
 .logo-header {
 	padding: 5px 10px 10px 10px;
-	font-size: 40px;
+	font-size: 20px;
 	margin: 0;
-	/* color: #F6AE2D; */
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -94,14 +92,14 @@ textarea:focus {
 }
 
 .header-link {
-	/* color: white; */
 	font-size: 1rem;
 }
 
 .header-link h1 {
 	margin: 0;
-	padding: 10px 0;
+	padding: 5px 0;
 	display: inline-block;
+	color: #F6AE2D;
 }
 
 .rec-carousel {
