@@ -18,6 +18,7 @@ const HeroCarousel = () => {
 			})
 			.then((images) => setBackgrounds(images))
 			.catch(console.error);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	if (!backgrounds) {
