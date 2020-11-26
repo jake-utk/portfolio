@@ -14,13 +14,12 @@ h3:hover {
 }
 
 .headshot {
-	/* padding: 5%; */
 	max-width: 40%;
-	border: 5px solid #93827f;
-	border-radius: 25%;
+	border: 5px solid #F7F5FB;
+	border-radius: 20%;
 	float: left;
-	/* margin-left: 2%; */
-	margin: 5%;
+    margin-right: 5%;
+    margin-top: 7%;
 }
 
 .headshot:hover {

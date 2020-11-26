@@ -111,3 +111,25 @@ label {
 .rec-carousel {
 	width: 100%;
 }
+
+.resume-button {
+	color: #f7f5fb;
+	font-family: "Big Shoulders Stencil Display", cursive;
+	border-color: #93827f00;
+	background-color: #31393c00;
+	border: solid;
+	margin: 4%;
+	padding: 2px 3px;
+	box-shadow: none;
+	border-radius: 10%;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.resume-button:hover {
+	border: solid #f6ae2d;
+}
+
+#resume-button-text {
+	color: #f7f5fb;
+}

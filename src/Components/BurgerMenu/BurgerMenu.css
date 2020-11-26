@@ -9,6 +9,10 @@
 	color: #f7f5fb !important;
 }
 
+.bm-burger-button:hover {
+	color: #f6ae2d;
+}
+
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
 	background: #f7f5fb !important;
