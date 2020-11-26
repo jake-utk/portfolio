@@ -7,6 +7,7 @@ import Contact from "./Components/Contact/Contact";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
 import { Route, Link } from "react-router-dom";
 import { AppContext } from "./AppContext";
+import Hero from "./Components/Hero/Hero"
 
 function App() {
 	const [menuOpenState, setMenuOpenState] = useState(false);
@@ -22,9 +23,10 @@ function App() {
 					<div id='page-wrap'>
 						{/* <div className='logo-header'>
 							<Link to='/resume' className='header-link'>
-								<h1>*CURRENTLY FOR HIRE*</h1>
+              <h1>*CURRENTLY FOR HIRE*</h1>
 							</Link>
 						</div> */}
+            <Hero />
 						<div className='main'>
 							<Route path='/' exact component={Home} />
 							<Route path='/aboutme' component={AboutMe} />
