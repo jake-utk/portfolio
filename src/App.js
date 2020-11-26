@@ -5,8 +5,9 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Resume from "./Components/Resume/Resume";
 import Contact from "./Components/Contact/Contact";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { AppContext } from "./AppContext";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
 	const [menuOpenState, setMenuOpenState] = useState(false);
@@ -20,11 +21,14 @@ function App() {
 						outerContainerId={"outer-container"}
 					/>
 					<div id='page-wrap'>
-						{/* <div className='logo-header'>
-							<Link to='/resume' className='header-link'>
-								<h1>*CURRENTLY FOR HIRE*</h1>
-							</Link>
-						</div> */}
+						<div className='logo-header'>
+							<button className='resume-button'>
+								<a href='./Resume.pdf' target='_blank' id="resume-button-text">
+									Resume
+								</a>
+							</button>
+						</div>
+						<Hero />
 						<div className='main'>
 							<Route path='/' exact component={Home} />
 							<Route path='/aboutme' component={AboutMe} />
@@ -34,13 +38,18 @@ function App() {
 						</div>
 					</div>
 				</AppContext.Provider>
+				<AboutMe />
 			</div>
 			<footer>
 				Developed by{" "}
-				<a href='https://github.com/jake-utk' target='_blank'>
+				<a href='https://github.com/jake-utk' target='_blank' rel='noreferrer'>
 					Jake Addis
 				</a>{" "}
-				© 2021. Please hire me!
+				(©2021) using{" "}
+				<a href='https://reactjs.org/' target='_blank' rel='noreferrer'>
+					React
+				</a>
+				. Please hire me!
 			</footer>
 		</div>
 	);

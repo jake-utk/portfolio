@@ -8,24 +8,47 @@
 
 */
 
-.App {
-	height: 100%;
-	color: #f7f5fb;
-	font-family: sans-serif;
-}
+/* FONTS HERE */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap");
+
+/* END FONTS */
 
 a {
 	text-decoration: none;
-	color: #5C9EAD
-}
-
-.lazy-loader {
+	color: #5c9ead;
 }
 
 footer {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-align: center;
+}
+
+form h1 {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+input {
+	padding: 7px;
+	margin: 3px;
+	font-size: 17px;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+.App {
+	height: 100%;
+	color: #f7f5fb;
+	font-family: sans-serif;
 }
 
 .center {
@@ -54,41 +77,11 @@ footer {
 	max-width: 100%;
 }
 
-img {
-	max-width: 100%;
-}
-
 .form-stack input,
 label {
 	display: block;
 	width: 200px;
 	margin: 3px;
-}
-
-form h1 {
-	margin: 0;
-	padding: 0;
-}
-
-input {
-	padding: 7px;
-	margin: 3px;
-	font-size: 17px;
-}
-
-input:focus,
-textarea:focus {
-	outline: none;
-}
-
-.logo-header {
-	padding: 5px 10px 10px 10px;
-	font-size: 20px;
-	margin: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 10;
 }
 
 .header-link {
@@ -99,9 +92,44 @@ textarea:focus {
 	margin: 0;
 	padding: 5px 0;
 	display: inline-block;
-	color: #F6AE2D;
+	color: #f6ae2d;
+}
+
+.lazy-loader {
+	font-size: 30px;
+}
+.logo-header {
+	padding: 5px 10px 10px 10px;
+	font-size: 20px;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
 }
 
 .rec-carousel {
 	width: 100%;
+}
+
+.resume-button {
+	color: #f7f5fb;
+	font-family: "Big Shoulders Stencil Display", cursive;
+	border-color: #93827f00;
+	background-color: #31393c00;
+	border: solid;
+	margin: 4%;
+	padding: 2px 3px;
+	box-shadow: none;
+	border-radius: 10%;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.resume-button:hover {
+	border: solid #f6ae2d;
+}
+
+#resume-button-text {
+	color: #f7f5fb;
 }
