@@ -1,13 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Components/Home/Home";
+import AboutMe from "./Components/AboutMe/AboutMe";
+import Resume from "./Components/Resume/Resume";
+import Contact from "./Components/Contact/Contact";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
-import { Route, Link } from 'react-router-dom'
+import { Route, Link } from "react-router-dom";
 
 function App() {
-
-
-
 	return (
 		<div className='App'>
 			<BurgerMenu
@@ -17,18 +17,17 @@ function App() {
 			<div id='page-wrap'>
 				<div className='logo-header'>
 					<Link to='/resume' className='header-link'>
-						<h1>SEEKING: Full Time Position</h1>
+						<h1>*CURRENTLY FOR HIRE*</h1>
 					</Link>
 				</div>
-        <div className='main'>
-          <Route path='/' exact componeont={Home} />
-          <Route path='/aboutme' />
-          <Route path='/projects' />
-          <Route path='/resume' />
-          <Route path='/contact' />
-        </div>
+				<div className='main'>
+					<Route path='/' exact component={Home} />
+					<Route path='/aboutme' component={AboutMe} />
+					<Route path='/projects' />
+					<Route path='/resume' component={Resume} />
+					<Route path='/contact' component={Contact} />
+				</div>
 			</div>
-<Home />
 			<footer>
 				Developed by{" "}
 				<a href='https://github.com/jake-utk' target='_blank'>
