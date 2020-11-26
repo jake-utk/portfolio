@@ -5,7 +5,7 @@ import Home from "./Components/Home/Home";
 function App() {
 	return (
 		<div className='App'>
-			<div className='logo-header'>Jake Addis | Software Engineer</div>
+			{/* <div className='logo-header'>Jake Addis | Software Engineer</div> */}
 
 			<Home />
 
