@@ -12,7 +12,7 @@ const HeroCarousel = () => {
 		axios
 			.get(url)
 			.then((res) => {
-				return res.data.results.map((image) => {
+				return res.data.results.slice(0, 8).map((image) => {
 					return image.urls.raw;
 				});
 			})
