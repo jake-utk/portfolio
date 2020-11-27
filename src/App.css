@@ -1,38 +1,61 @@
+/* COLORS
+    grey: #31393C
+    lightGrey: #93827F
+    white: #F7F5FB
+    orangeYellow: #F6AE2D
+    blueGrey: #5C9EAD
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap");
+
+a {
+	text-decoration: none;
+	color: #5c9ead;
+}
+
+body,
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
 .App {
-  text-align: center;
+	height: 100%;
+	color: #f7f5fb;
+	font-family: "Libre Franklin", sans-serif;
+	font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* FLEX ELEMENT TO CENTER */
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* REVISIT THIS */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: transparent;
+	margin: 10px;
+	padding: 10px;
+	max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lazy-loader {
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	font-family: "Big Shoulders Stencil Display", cursive;
 }
