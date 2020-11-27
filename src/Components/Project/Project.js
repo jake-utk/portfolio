@@ -5,6 +5,7 @@ const Project = () => {
     return (
 			<div className='project parallax-project'>
 				<section>
+					<h2>Project Component</h2>
 					<h3>Project 1</h3>
 					<p>
 						Description of project Lorem ipsum dolor sit, amet consectetur

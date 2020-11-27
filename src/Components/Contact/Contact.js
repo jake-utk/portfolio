@@ -6,6 +6,7 @@ const Contact = () => {
     return (
 			<div className='contact parallax-contact'>
 				<section>
+					<h2>Contact Component</h2>
 					<h3>Who I Am:</h3>
 					<p>
 						I view software engineering as a lifelong journey of learning and

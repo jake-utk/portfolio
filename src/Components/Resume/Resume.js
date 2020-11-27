@@ -6,6 +6,7 @@ const Resume = () => {
     return (
 			<div className='resume parallax-resume'>
 				<section>
+					<h2>Resume Component</h2>
 					<h3>Who I Am:</h3>
 					<p>
 						I view software engineering as a lifelong journey of learning and
