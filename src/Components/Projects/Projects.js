@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
-import Project from "../Project/Project";
+import Project from '../Project/Project'
 import axios from "axios";
 
 const Projects = ({ setImage }) => {
@@ -30,10 +30,8 @@ const Projects = ({ setImage }) => {
 	return (
 		<div className='projects parallax-projects'>
 			<h2><span id="projects-author">{profile.login}/{profile.name}</span>'s Github Repositories</h2>
-
 			{projects.map((project) => {
-                console.log('project component being sent: ', project);
-				<Project project={project} />;
+				return <Project project={project} />
 			})}
 		</div>
 	);
