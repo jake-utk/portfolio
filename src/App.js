@@ -20,15 +20,17 @@ function App() {
 						pageWrapId={"page-wrap"}
 						outerContainerId={"outer-container"}
 					/>
-					<div id='page-wrap'>
-						<div className='logo-header'>
+					<Hero />
+					<div className='parallax'>
+						<div id='page-wrap'>
+							{/* <div className='logo-header'>
 							<button className='resume-button'>
 								<a href='./Resume.pdf' target='_blank' id="resume-button-text">
 									Resume
 								</a>
 							</button>
+						</div> */}
 						</div>
-						<Hero />
 						<div className='main'>
 							<Route path='/' exact component={Home} />
 							<Route path='/aboutme' component={AboutMe} />
@@ -36,9 +38,9 @@ function App() {
 							<Route path='/resume' component={Resume} />
 							<Route path='/contact' component={Contact} />
 						</div>
+						<AboutMe />
 					</div>
 				</AppContext.Provider>
-				<AboutMe />
 			</div>
 			<footer>
 				Developed by{" "}

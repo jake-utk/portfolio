@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const AboutMe = () => {
-    return (
-			<div>
+	return (
+		<div>
+			<section>
 				<h3>Who I Am:</h3>
 				<p>
 					I view software engineering as a lifelong journey of learning and
@@ -15,14 +16,17 @@ const AboutMe = () => {
 					I am able to bring to your team. I'm a self-starter who always has to
 					be doing something, and I'm passionate about the quality of my work.
 				</p>
+			</section>
+			<section>
 				<h3>What I Do:</h3>
 				<p>
 					I am a dynamic Full Stack Software Engineer with experience building
 					projects and developing solutions in React.js/Express/Node.js and
 					Python/Django.
 				</p>
-			</div>
-		);
+			</section>
+		</div>
+	);
 };
 
 export default AboutMe;
