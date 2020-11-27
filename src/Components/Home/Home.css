@@ -1,41 +1,31 @@
-p,
-h2,
-h3 {
-	align-items: flex-end;
-	flex-wrap: wrap;
-}
-
-h2:hover {
-	color: #f6ae2d;
-}
-
-h3:hover {
-	color: #f6ae2d;
-}
-
 .headshot {
 	max-width: 40%;
 	border: 5px solid #F7F5FB;
-	border-radius: 20%;
+	border-radius: 5%;
 	float: left;
     margin-right: 5%;
     margin-top: 7%;
 }
 
 .headshot:hover {
-	/* max-width: 37.5%; */
 	border: 5px solid #f6ae2d;
 }
 
 .home {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	padding: 5%;
+	background-color: #31393C;
+}
+
+.home-text {
+	float: right;
+	text-align: center;
 }
 
 #beg {
 	color: #f6ae2d;
-	font-size: 200%;
+	font-size: 175%;
 }
 
 #title {

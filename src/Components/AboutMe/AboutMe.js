@@ -1,9 +1,11 @@
 import React from "react";
+import './AboutMe.css'
 
 const AboutMe = () => {
 	return (
-		<div>
+		<div className='about-me parallax-aboutMe'>
 			<section>
+				<h2>About Me Component</h2>
 				<h3>Who I Am:</h3>
 				<p>
 					I view software engineering as a lifelong journey of learning and

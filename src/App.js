@@ -5,6 +5,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Resume from "./Components/Resume/Resume";
 import Contact from "./Components/Contact/Contact";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
+import Project from "./Components/Project/Project"
 import { Route } from "react-router-dom";
 import { AppContext } from "./AppContext";
 import Hero from "./Components/Hero/Hero";
@@ -21,16 +22,6 @@ function App() {
 						outerContainerId={"outer-container"}
 					/>
 					<Hero />
-					<div className='parallax'>
-						<div id='page-wrap'>
-							{/* <div className='logo-header'>
-							<button className='resume-button'>
-								<a href='./Resume.pdf' target='_blank' id="resume-button-text">
-									Resume
-								</a>
-							</button>
-						</div> */}
-						</div>
 						<div className='main'>
 							<Route path='/' exact component={Home} />
 							<Route path='/aboutme' component={AboutMe} />
@@ -39,7 +30,9 @@ function App() {
 							<Route path='/contact' component={Contact} />
 						</div>
 						<AboutMe />
-					</div>
+						<Project />
+						<Resume />
+						<Contact />
 				</AppContext.Provider>
 			</div>
 			<footer>

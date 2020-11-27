@@ -1,0 +1,21 @@
+@media (min-width: 900px) {
+	/* mobile-only */
+	.parallax-project {
+		background-attachment: scroll;
+	}
+}
+
+.project {
+	background-color: #93827f;
+	margin: 5%;
+	padding: 50px;
+}
+
+.parallax-project {
+	background-image: url("https://images.unsplash.com/photo-1537763251863-4ef771ed9677?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
