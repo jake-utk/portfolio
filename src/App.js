@@ -40,7 +40,7 @@ function App() {
 				<a href='https://github.com/jake-utk' target='_blank' rel='noreferrer'>
 					Jake Addis
 				</a>{" "}
-				(©2021) using{" "}
+				(©2020) using{" "}
 				<a href='https://reactjs.org/' target='_blank' rel='noreferrer'>
 					React
 				</a>

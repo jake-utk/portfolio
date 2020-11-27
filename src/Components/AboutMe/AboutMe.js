@@ -1,10 +1,12 @@
 import React from "react";
-import './AboutMe.css'
+import "./AboutMe.css";
+import guitar from "./IMG_4485.JPG";
 
 const AboutMe = () => {
 	return (
 		<div className='about-me parallax-aboutMe'>
-			<section>
+			<section className='aboutMe-container'>
+				<img src={guitar} className='guitar' alt='guitar'></img>
 				<h2>About Me Component</h2>
 				<h3>Who I Am:</h3>
 				<p>
@@ -18,8 +20,6 @@ const AboutMe = () => {
 					I am able to bring to your team. I'm a self-starter who always has to
 					be doing something, and I'm passionate about the quality of my work.
 				</p>
-			</section>
-			<section>
 				<h3>What I Do:</h3>
 				<p>
 					I am a dynamic Full Stack Software Engineer with experience building

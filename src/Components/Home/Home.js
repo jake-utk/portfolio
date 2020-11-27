@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css";
-import headshot from "./headshot1.jpg"
 
 const Home = () => {
 	const [image, setImage] = useState();
@@ -21,7 +20,7 @@ const Home = () => {
 			<div className='home'>
 				<div className='home-text'>
 					<img
-						src={headshot}
+						src={image}
 						className='headshot'
 						alt='headshot'></img>
 					<h1 id='beg'>Currently seeking full time position.</h1>
@@ -31,6 +30,7 @@ const Home = () => {
 					<h3 id='quote'>
 						"The road to success is always under construction."
 					</h3>
+					<p className='brand-statement'>Brand statement here Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum provident inventore sunt modi odit, quas aspernatur accusantium nesciunt minus delectus eum voluptatibus sit optio. Totam quibusdam dolore veniam tempora voluptates.</p>
 				</div>
 			</div>
 		</div>
