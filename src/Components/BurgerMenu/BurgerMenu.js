@@ -23,7 +23,7 @@ const BurgerMenu = () => {
 				<Link to='/' className='bm-item' onClick={toggleMenu}>
 					Home
 				</Link>
-				<Link to='/aboutme' className='bm-item' isOpen={false} onClick={toggleMenu}>
+				<Link to='/aboutme' className='bm-item' onClick={toggleMenu}>
 					About Me
 				</Link>
 				<Link to='/projects' className='bm-item' onClick={toggleMenu}>

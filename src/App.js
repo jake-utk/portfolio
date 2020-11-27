@@ -23,9 +23,9 @@ function App() {
 					/>
 					<Hero />
 						<div className='main'>
-							<Route path='/' exact component={Home} />
+							<Route path='/' component={Home} />
 							<Route path='/aboutme' component={AboutMe} />
-							<Route path='/projects' />
+							<Route path='/projects' componeont={Project} />
 							<Route path='/resume' component={Resume} />
 							<Route path='/contact' component={Contact} />
 						</div>
