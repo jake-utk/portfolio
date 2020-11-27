@@ -1,8 +1,9 @@
 import React from "react";
+import './AboutMe.css'
 
 const AboutMe = () => {
 	return (
-		<div>
+		<div className='about-me parallax-aboutMe'>
 			<section>
 				<h3>Who I Am:</h3>
 				<p>
