@@ -1,17 +1,39 @@
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
 	.parallax-aboutMe {
 		background-attachment: scroll;
 	}
-}
+} */
 
 .about-me {
-    background-color: #93827F;
-    margin: 5%;
-    padding: 50px;
+	background-color: #93827f;
+	margin-top: 15%;
+	padding: 50px;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutMe-container {
+	float: left;
+	text-align: center;
+	/* background-color: #93827F; */
+}
+
+.guitar {
+	max-width: 35%;
+	border: 5px solid #f7f5fb;
+	border-radius: 5%;
+	float: right;
+	margin-left: 5%;
+	margin-top: 7%;
+}
+
+.guitar:hover {
+	border: 5px solid #f6ae2d;
 }
 
 .parallax-aboutMe {
-	background-image: url("https://images.unsplash.com/photo-1556639073-c1d487e00b67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+	background-image: url("https://images.unsplash.com/photo-1537763251863-4ef771ed9677?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
 	height: 100%;
 	background-attachment: fixed;
 	background-position: center;

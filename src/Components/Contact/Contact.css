@@ -1,13 +1,14 @@
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
 	.parallax-contact {
 		background-attachment: scroll;
 	}
-}
+} */
 
 .contact {
-    background-color: #93827F;
-    margin: 5%;
-    padding: 50px;
+	background-color: #93827f;
+	margin-top: 15%;
+	padding: 50px;
+	min-height: 500px;
 }
 
 .parallax-contact {

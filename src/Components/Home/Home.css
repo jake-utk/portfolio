@@ -1,10 +1,17 @@
+@media (max-width: 900px) {
+	#title {
+		margin-top: 10%;
+	}
+}
+
 .headshot {
 	max-width: 40%;
 	border: 5px solid #F7F5FB;
 	border-radius: 5%;
 	float: left;
     margin-right: 5%;
-    margin-top: 7%;
+	margin-top: 7%;
+	margin-bottom: 5%;
 }
 
 .headshot:hover {
@@ -13,23 +20,22 @@
 
 .home {
 	display: flex;
-	/* flex-direction: column; */
+	flex-direction: column;
 	padding: 5%;
 	background-color: #31393C;
 }
 
 .home-text {
 	float: right;
+	/* background-color: #93827F; */
 	text-align: center;
 }
 
 #beg {
 	color: #f6ae2d;
-	font-size: 175%;
+	font-size: 30px;
 }
 
 #title {
-	justify-content: center;
-	align-items: flex-end;
-	padding: 5px;
+	font-size: 20px;
 }

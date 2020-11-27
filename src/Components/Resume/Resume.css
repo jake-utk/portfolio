@@ -1,13 +1,45 @@
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
 	.parallax-resume {
 		background-attachment: scroll;
 	}
+} */
+
+.resumeButton {
+	margin-top: 20%;
+	font-size: 40px;
+	color: #f7f5fb;
+	border: 5px solid #f7f5fb;
+	background-color: #93827f00;
 }
 
 .resume {
+	align-items: center;
     background-color: #93827F;
-    margin: 5%;
-    padding: 50px;
+	margin-top: 15%;
+	min-height: 500px;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+}
+
+.resume-pic {
+	max-width: 85%;
+	max-height: 85%;
+	border: 5px solid #f7f5fb;
+	border-radius: 5%;
+	float: center;
+	margin: 5%;
+}
+
+.resume-pic:hover {
+	border: 5px solid #f6ae2d;
+}
+
+
+.resume-container {
+	float: center;
+	text-align: center;
+	align-items: center;
 }
 
 .parallax-resume {
