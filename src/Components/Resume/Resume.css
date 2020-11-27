@@ -5,7 +5,8 @@
 } */
 
 .resumeButton {
-	margin-top: 20%;
+	margin-top: 15%;
+	margin-bottom: 15%;
 	font-size: 40px;
 	color: #f7f5fb;
 	border: 5px solid #f7f5fb;
@@ -14,7 +15,7 @@
 
 .resume {
 	align-items: center;
-    background-color: #93827F;
+	background-color: #93827f;
 	margin-top: 15%;
 	min-height: 500px;
 	padding: 50px;
@@ -35,7 +36,6 @@
 	border: 5px solid #f6ae2d;
 }
 
-
 .resume-container {
 	float: center;
 	text-align: center;
@@ -43,7 +43,8 @@
 }
 
 .parallax-resume {
-	background-image: url("https://images.unsplash.com/photo-1602110604210-b5a7b536fb12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("https://images.unsplash.com/photo-1602110604210-b5a7b536fb12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1057&q=80");
 	height: 100%;
 	background-attachment: fixed;
 	background-position: center;
