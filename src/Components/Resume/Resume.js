@@ -1,7 +1,7 @@
 // resume to go here once it's done lol
 import React from "react";
 import "./Resume.css";
-import headshot from "./headshot1.jpg";
+import headshot from "./headshot1.jpeg";
 import fakeResume from "./Resume.pdf";
 
 const Resume = () => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Profiler } from "react";
 import "./Project.css";
 
 const Project = ({ project }) => {
@@ -10,7 +10,17 @@ const Project = ({ project }) => {
 						{project.full_name}
 					</a>
 				</h3>
+				{!project.homepage ? null : (
+					<h4>
+						<a href={project.homepage} target='_blank'>
+							Link to Website
+						</a>
+					</h4>
+				)}
+				<h3>Language: {project.language}</h3>
 				<p>{project.description}</p>
+				<p>Project Created: {project.created_at}</p>
+				<p>Last Updated at: {project.updated_at}</p>
 			</section>
 		</div>
 	);
