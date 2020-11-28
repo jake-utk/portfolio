@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import "./Home.css";
 
-const Home = () => {
-	const [image, setImage] = useState();
-
-	useEffect(() => {
-		axios.get(`https://api.github.com/users/jake-utk`).then((res) => {
-			setImage(res.data.avatar_url);
-		});
-	}, []);
+const Home = ({ image }) => {
 
 	if (!image) {
 		return <p className='lazy-loader'>Loading...</p>;

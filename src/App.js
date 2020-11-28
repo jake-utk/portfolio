@@ -5,13 +5,14 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Resume from "./Components/Resume/Resume";
 import Contact from "./Components/Contact/Contact";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
-import Project from "./Components/Project/Project"
+import Projects from "./Components/Projects/Projects"
 import { Route } from "react-router-dom";
 import { AppContext } from "./AppContext";
 import Hero from "./Components/Hero/Hero";
 
 function App() {
 	const [menuOpenState, setMenuOpenState] = useState(false);
+	const [image, setImage] = useState();
 
 	return (
 		<div className='App'>
@@ -23,14 +24,15 @@ function App() {
 					/>
 					<Hero />
 						<div className='main'>
-							<Route path='/' component={Home} />
+							{/* <Route path='/' image={image} component={Home} /> */}
 							<Route path='/aboutme' component={AboutMe} />
-							<Route path='/projects' componeont={Project} />
+							<Route path='/projects' componeont={Projects} />
 							<Route path='/resume' component={Resume} />
 							<Route path='/contact' component={Contact} />
 						</div>
+						<Home image={image} />
 						<AboutMe />
-						<Project />
+						<Projects setImage={setImage} />
 						<Resume />
 						<Contact />
 				</AppContext.Provider>
