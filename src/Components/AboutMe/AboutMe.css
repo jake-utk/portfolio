@@ -1,31 +1,42 @@
-/* @media (min-width: 900px) {
-	.parallax-aboutMe {
-		background-attachment: scroll;
+@media (max-width: 767px) {
+	.aboutMe-container {
+		flex-direction: column;
 	}
-} */
+
+	.guitar {
+		margin: 0 auto;
+	}
+}
 
 .about-me {
-	background-color: #93827f;
-	margin-top: 15%;
-	padding: 50px;
-	min-height: 500px;
 	display: flex;
 	flex-direction: column;
+	margin-top: 15%;
+	min-height: 500px;
+	padding: 50px;
+}
+
+.about-me section {
+	margin: 0 auto;
+	max-width: 1200px;
 }
 
 .aboutMe-container {
-	float: left;
-	text-align: center;
-	/* background-color: #93827F; */
+	display: flex;
+}
+
+.content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
 }
 
 .guitar {
 	max-width: 35%;
 	border: 5px solid #f7f5fb;
 	border-radius: 5%;
-	float: right;
-	margin-left: 5%;
-	margin-top: 7%;
 }
 
 .guitar:hover {
