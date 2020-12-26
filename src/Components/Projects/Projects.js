@@ -28,8 +28,6 @@ const Projects = ({ setImage }) => {
 			.catch(console.error);
 	}, []);
 
-	console.log("projects:", projects);
-
 	if (!projects || !profile) {
 		return <p className='lazy-loader'>Loading...</p>;
 	}

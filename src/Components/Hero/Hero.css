@@ -22,7 +22,7 @@
 }
 
 .hero-image {
-	height: 300px;
+	height: 100vh;
 	margin: 0;
 	overflow: hidden;
 	object-fit: cover;
@@ -38,12 +38,12 @@
 
 .hero-text h1 {
 	margin: 0;
-	font-size: 50px;
+	font-size: 72px;
 	font-family: "Big Shoulders Stencil Display", cursive;
 }
 
 .hero-text p {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .stack {
