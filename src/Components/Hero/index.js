@@ -120,7 +120,7 @@ const ReserveBtn = styled(Link)`
 
 const Hero = () => {
     return (
-        <Container>
+        <Container id='home'>
             <Background>
                 <VideoImport autoPlay loop muted src={Video} type='video/mp4' />
             </Background>

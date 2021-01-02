@@ -9,7 +9,7 @@ import { animateScroll as Scroll } from "react-scroll";
 const NavWrapper = styled.nav`
 	align-items: center;
 	background: ${({ scrollValue }) =>
-		scrollValue ? "#1D2228" : "transparent"}; // eerie black
+		scrollValue ? "#1d2228" : "transparent"}; // eerie black
 	display: flex;
 	font-size: 1rem;
 	height: 80px;
@@ -35,7 +35,7 @@ const Container = styled.div`
 `;
 
 const LogoRouter = styled(LinkRouter)`
-	color: white;
+	color: #E1E2E2; // platinum
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -55,7 +55,7 @@ const BurgerButton = styled.div`
 	display: none;
 
 	@media screen and (max-width: 780px) {
-		color: #f58549; // mango tango
+		color: #E1E2E2; // platinum
 		cursor: pointer;
 		display: block;
 		font-size: 1.8rem;
@@ -84,7 +84,7 @@ const BurgerItem = styled.li`
 
 const BurgerLinkScroll = styled(LinkScroll)`
 	align-items: center;
-	color: #e1e2e2; // platinum
+	color: #E1E2E2; // platinum
 	cursor: pointer;
 	display: flex;
 	height: 100%;
@@ -92,7 +92,7 @@ const BurgerLinkScroll = styled(LinkScroll)`
 	text-decoration: none;
 
 	&.active {
-		border-bottom: 3px solid #ffffff; // random white
+		border-bottom: 3px solid #e1e2e2; // platinum
 	}
 `;
 
@@ -116,29 +116,46 @@ const Nav = ({ toggle }) => {
 	};
 
 	return (
-		<IconContext.Provider value={{ color: "#1D2228" }}>
+		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollValue={scrollValue}>
 				<Container>
 					<LogoRouter to='/' onClick={scrollHome}>
-						Logo
+						J/A
 					</LogoRouter>
 					<BurgerButton onClick={toggle}>
 						<FaBars />
 					</BurgerButton>
 					<BurgerMenu>
 						<BurgerItem>
-							<BurgerLinkScroll to='' exact='true' smooth={true} duration={500}>
-								First Link
+							<BurgerLinkScroll
+								to='home'
+								exact='true'
+								smooth={true}
+								duration={500}>
+								Home
 							</BurgerLinkScroll>
 						</BurgerItem>
 						<BurgerItem>
-							<BurgerLinkScroll to='' exact='true' smooth={true} duration={500}>
-								First Link
+							<BurgerLinkScroll
+								to='about'
+								exact='true'
+								smooth={true}
+								duration={500}>
+								About
 							</BurgerLinkScroll>
 						</BurgerItem>
 						<BurgerItem>
-							<BurgerLinkScroll to='' exact='true' smooth={true} duration={500}>
-								First Link
+							<BurgerLinkScroll
+								to='contact'
+								exact='true'
+								smooth={true}
+								duration={500}>
+								Contact
+							</BurgerLinkScroll>
+						</BurgerItem>
+						<BurgerItem>
+							<BurgerLinkScroll to='projects' exact='true' smooth={true} duration={500}>
+								Projects
 							</BurgerLinkScroll>
 						</BurgerItem>
 					</BurgerMenu>

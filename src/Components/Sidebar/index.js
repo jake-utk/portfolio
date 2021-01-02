@@ -5,7 +5,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 const Container = styled.aside`
 	align-items: center;
-	background: #646c79; // black coral
+	background: #1D2228; // eerie black
 	display: grid;
 	height: 100%;
 	left: 0;
@@ -28,27 +28,27 @@ const Icon = styled.div`
 `;
 
 const CloseIcon = styled(FaTimes)`
-	color: #1d2228; // eerie black
+	color: #E1E2E2; // platinum
 `;
 
 const Wrapper = styled.div`
-	color: #1d2228; // eerie black
+	color: #E1E2E2; // platinum
 `;
 
 const Menu = styled.ul`
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(7, 80px); // number of menu items
+	grid-template-rows: repeat(4, 80px); // number of menu items
 	text-align: center;
 
 	@media screen and (max-width: 480px) {
-		grid-template-rows: repeat(7, 60px); // number of menu items
+		grid-template-rows: repeat(4, 60px); // number of menu items
 	}
 `;
 
 const MenuLinkScroll = styled(LinkScroll)`
 	align-items: center;
-	color: #1d2228; // eerie black
+	color: #E1E2E2; // platinum
 	cursor: pointer;
 	display: flex;
 	font-size: 1.5rem;
@@ -71,14 +71,17 @@ const Sidebar = ({ isOpen, toggle }) => {
 			</Icon>
 			<Wrapper>
 				<Menu>
-					<MenuLinkScroll to='/' onClick={toggle}>
-						First Link
+					<MenuLinkScroll to='home' onClick={toggle}>
+						Home
 					</MenuLinkScroll>
-					<MenuLinkScroll to='/' onClick={toggle}>
-						Second Link
+					<MenuLinkScroll to='about' onClick={toggle}>
+						About
 					</MenuLinkScroll>
-					<MenuLinkScroll to='/' onClick={toggle}>
-						Third Link
+					<MenuLinkScroll to='contact' onClick={toggle}>
+						Contact
+					</MenuLinkScroll>
+					<MenuLinkScroll to='Projects' onClick={toggle}>
+						Projects
 					</MenuLinkScroll>
 				</Menu>
 			</Wrapper>

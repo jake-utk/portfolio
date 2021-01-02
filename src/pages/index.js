@@ -3,6 +3,7 @@ import Navigation from '../Components/Navigation'
 import Sidebar from '../Components/Sidebar'
 import Hero from '../Components/Hero'
 import About from '../Components/About'
+import Contact from '../Components/Contact'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
             <Navigation toggle={toggle} />
             <Hero />
             <About />
+            <Contact />
         </>
     )
 }

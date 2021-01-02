@@ -95,12 +95,13 @@ const ImgContainer = styled.div`
 const Img = styled.img`
 	margin: 0 0 10px 0;
 	padding-right: 0;
-	width: 100%;
+    width: 100%;
+    border-radius: 100%;
 `;
 
 const About = () => {
 	return (
-		<Container>
+		<Container id='about'>
 			<Wrapper>
 				<Row>
 					<ColumnOne>
@@ -110,16 +111,19 @@ const About = () => {
 					</ColumnOne>
 					<ColumnTwo>
 						<Content>
-							<Intro>Intro to this section...</Intro>
+							<Intro>Learn more...</Intro>
 							<H1>About me</H1>
 							<Description>
-								Description here Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Voluptas ducimus, nemo aut animi quae quam
-								consequatur, porro beatae provident quo ex. Aliquam, a harum
-								perspiciatis dolore explicabo minima modi ullam.
+								I’m a software developer who designs object-oriented,
+								user-centric, and responsive applications that bring a
+								business’s idea to life. I leverage my technical, analytical,
+								and problem-solving skills to write functional application code
+								that is modular and is ready to scale. I’m able to debug my
+								issues independently and have experience with version control in
+								a team environment.
 							</Description>
 							<ButtonContainer>
-								<Button>IDK Button</Button>
+								<Button>Resume?</Button>
 							</ButtonContainer>
 						</Content>
 					</ColumnTwo>
