@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     background-color: #E1E2E2;
+    height: 800px;
+    display: flex;
 `
 
 const Skills = () => {
