@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
@@ -127,6 +127,18 @@ const SocialIconLink = styled.a`
 `;
 
 const Footer = () => {
+	const [windowSize, setWindowSize] = useState()
+
+	const breakpoint = 780
+
+	useEffect(() => {
+		setWindowSize(window.innerWidth)
+	}, [])
+
+	window.addEventListener("resize", () => {
+		setWindowSize(window.innerWidth)
+	})
+
 	const scrollHome = () => {
 		Scroll.scrollToTop();
 	};
@@ -134,7 +146,7 @@ const Footer = () => {
 	return (
 		<Container>
 			<Wrapper>
-				<LinksContainer>
+				{windowSize > breakpoint ? <LinksContainer>
 					<LinksWrapper>
 						<LinkItems>
 							<FooterLink to='/'>Link</FooterLink>
@@ -145,6 +157,7 @@ const Footer = () => {
 						</LinkItems>
 					</LinksWrapper>
 				</LinksContainer>
+				: null}
 				<SocialMedia>
 					<SocialWrapper>
 						<Logo to='/' onClick={scrollHome}>
