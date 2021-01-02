@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../Styles/index";
 import Image from "../../images/DSC01950.jpeg";
-import Resume from "../../docs/Resume.pdf"
+import Resume from "../../docs/Resume.pdf";
 
 const Container = styled.div`
 	background: #1d2228; // eerie black
@@ -21,9 +20,10 @@ const Wrapper = styled.div`
 	margin-right: auto;
 	max-width: 1100px;
 	padding: 0 24px;
-	width: 100%auto;
+	width: 100%;
 	z-index: 1;
 `;
+
 const Row = styled.div`
 	align-items: center;
 	display: grid;
@@ -69,6 +69,10 @@ const Description = styled.p`
 	line-height: 24px;
 	margin-bottom: 35px;
 	max-width: 440px;
+
+	@media screen and (max-width: 480px) {
+		font-size: 15px;
+	}
 `;
 
 const H1 = styled.h1`
@@ -92,8 +96,28 @@ const ButtonContainer = styled.div`
 	}
 `;
 
-const ButtonLink = styled.a`
+const Button = styled.a`
+	border-radius: 0px;
+	background: #e1e2e2; //platinum
+	white-space: nowrap;
+	padding: 16px 50px;
+	color: #1d2228; // eerie black
+	font-size: 28px;
+	outline: 5px solid #646C79; // black coral
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease-in-out;
 	text-decoration: none;
+	
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		background: #646C79; // black coral
+		color: #e1e2e2; // platinum
+		outline: 5px solid #e1e2e2; // platinum
+	}
 `;
 
 const ImgContainer = styled.div`
@@ -132,9 +156,9 @@ const About = () => {
 								a team environment.
 							</Description>
 							<ButtonContainer>
-								<ButtonLink href={Resume} target='_blank' rel='noreferrer'>
-									<Button>Resume</Button>
-								</ButtonLink>
+								<Button href={Resume} target='_blank' rel='noreferrer'>
+									Resume
+								</Button>
 							</ButtonContainer>
 						</Content>
 					</ColumnTwo>

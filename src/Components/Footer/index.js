@@ -155,7 +155,7 @@ const Footer = () => {
 						</Copyright>
 						<SocialIcons>
 							<SocialIconLink
-								href='https://linkedin.com'
+								href='https://www.linkedin.com/in/jakeaddis/'
 								target='_blank'
 								aria-label='LinkedIn'>
 								<FaLinkedin />
