@@ -1,8 +1,6 @@
 import React from 'react'
 import Video from '../../videos/video.mp4'
 import styled from 'styled-components'
-import { Link } from 'react-scroll'
-import { useHistory } from 'react-router-dom'
 
 const Container = styled.div`
     align-items: center;
@@ -89,33 +87,6 @@ const P = styled.p`
 		font-size: 20px;
 	}
 `;
-
-const Wrapper = styled.div`
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	margin-top: 32px;
-`;
-
-const ReserveBtn = styled(Link)`
-    background: #1d2228; // eerie black
-    border-radius: 0px;
-    border: 2.5px solid;
-    color: #9B1D20; // ruby read
-    cursor: pointer;
-    font-size: 16px;
-    outline: none;
-    padding: 10px 22px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    white-space: nowrap;
-
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        background: #fff; // WHITE CHANGE IT
-        color: #646C79; // black coral
-    }
-`
 
 
 const Hero = () => {

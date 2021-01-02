@@ -80,7 +80,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 					<MenuLinkScroll to='contact' onClick={toggle}>
 						Contact
 					</MenuLinkScroll>
-					<MenuLinkScroll to='Projects' onClick={toggle}>
+					<MenuLinkScroll to='projects' onClick={toggle}>
 						Projects
 					</MenuLinkScroll>
 				</Menu>

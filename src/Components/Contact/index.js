@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Button } from '../../Components/Styles'
 
 const Container = styled.div`
 	background: #e1e2e2; // platinum
@@ -76,16 +77,11 @@ const Label = styled.label`
 	margin-bottom: 8px;
 `;
 
-const FormButton = styled.button`
-	color: #e1e2e2; // platinum
-	border-radius: 4px;
-	border: none;
-	background: #646c79; // black coral
-	cursor: pointer;
-	font-size: 20px;
-	padding: 16px 0;
+const FormButton = styled(Button)`
 	margin-top: 10px;
-`;
+	outline: 0px;
+
+`
 
 const InputTextArea = styled.textarea`
 	width: 100%;
@@ -132,7 +128,7 @@ const Contact = () => {
 							onChange={(event) => setContact(event.target.value)}
 							value={contact}
 						/>
-                        <FormButton>Submit</FormButton>
+                        <FormButton to=''>Submit</FormButton>
 					</Form>
 				</Content>
 			</Wrapper>

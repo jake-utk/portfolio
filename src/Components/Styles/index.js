@@ -3,23 +3,25 @@ import { Link } from 'react-scroll'
 
 export const Button = styled(Link)`
     border-radius: 0px;
-    background: white; // conditional
+    background: #e1e2e2; // platinum / conditional
     white-space: nowrap;
     padding: 16px 50px; // conditional
-    color: black; // conditional
+    color: #1d2228; // eerie black /  conditional
     font-size: 28px; // conditional
-    outline: 5px solid grey;
+    outline: 5px solid #646C79; // black coral / conditional
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: blue; // conditional
-        color: red; // conditional
+        background: #646C79; // black coral / conditional
+        color: #e1e2e2; // platinum / conditional
+        outline: 5px solid #e1e2e2; // platinum / conditional
     }
 `
 
