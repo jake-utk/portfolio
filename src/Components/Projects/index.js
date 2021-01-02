@@ -9,12 +9,16 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 1000px) {
+        height: 1200px;
+    }
+
     @media screen and (max-width: 780px) {
-        height: 1100px;
+        height: 1800px;
     }
 
     @media screen and (max-width: 480px) {
-        height: 1300px;
+        height: 1800px;
     }
 `;
 
@@ -89,6 +93,11 @@ const Projects = () => {
 		<Container id='projects'>
 			<H1>Projects</H1>
 			<Wrapper>
+				<Card>
+					<Icon />
+					<H2>Project Name</H2>
+					<P>Description of the project, but it's brief for now.</P>
+				</Card>
 				<Card>
 					<Icon />
 					<H2>Project Name</H2>
