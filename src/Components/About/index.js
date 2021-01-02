@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from '../Styles/index'
-import Image from '../../images/DSC01950.jpeg'
+import { Button } from "../Styles/index";
+import Image from "../../images/DSC01950.jpeg";
+import Resume from "../../docs/Resume.pdf"
 
 const Container = styled.div`
 	background: #1d2228; // eerie black
@@ -85,6 +86,14 @@ const H1 = styled.h1`
 const ButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
+
+	@media screen and (max-width: 480px) {
+		justify-content: center;
+	}
+`;
+
+const ButtonLink = styled.a`
+	text-decoration: none;
 `;
 
 const ImgContainer = styled.div`
@@ -95,8 +104,8 @@ const ImgContainer = styled.div`
 const Img = styled.img`
 	margin: 0 0 10px 0;
 	padding-right: 0;
-    width: 100%;
-    border-radius: 100%;
+	width: 100%;
+	border-radius: 100%;
 `;
 
 const About = () => {
@@ -123,7 +132,9 @@ const About = () => {
 								a team environment.
 							</Description>
 							<ButtonContainer>
-								<Button>Resume?</Button>
+								<ButtonLink href={Resume} target='_blank' rel='noreferrer'>
+									<Button>Resume</Button>
+								</ButtonLink>
 							</ButtonContainer>
 						</Content>
 					</ColumnTwo>

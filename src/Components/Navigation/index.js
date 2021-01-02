@@ -18,6 +18,7 @@ const NavWrapper = styled.nav`
 	position: sticky;
 	top: 0;
 	z-index: 10;
+	/* border-bottom: ${({ scrollValue }) => scrollValue ? "2.5px solid #F58549" : "transparent"}; */
 
 	@media screen and (max-width: 960px) {
 		transition: 0.8s all ease;

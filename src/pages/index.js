@@ -4,6 +4,9 @@ import Sidebar from '../Components/Sidebar'
 import Hero from '../Components/Hero'
 import About from '../Components/About'
 import Contact from '../Components/Contact'
+import Footer from '../Components/Footer'
+import Projects from '../Components/Projects'
+import Skills from '../Components/Skills'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +22,9 @@ const Home = () => {
             <Hero />
             <About />
             <Contact />
+            <Projects />
+            <Skills />
+            <Footer />
         </>
     )
 }

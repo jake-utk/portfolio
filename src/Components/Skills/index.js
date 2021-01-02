@@ -1,10 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Container = styled.div`
+    background-color: #E1E2E2;
+`
 
 const Skills = () => {
     return (
-        <div>
+        <Container>
             Skills display of some kind
-        </div>
+        </Container>
     )
 }
 
