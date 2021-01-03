@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
-import { FaLinkedin } from "react-icons/fa";
-import { AiOutlineMail } from 'react-icons/ai'
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { ImMail } from "react-icons/im";
 
 const Container = styled.footer`
 	background-color: #1d2228;
@@ -127,17 +127,17 @@ const SocialIconLink = styled.a`
 `;
 
 const Footer = () => {
-	const [windowSize, setWindowSize] = useState()
+	const [windowSize, setWindowSize] = useState();
 
-	const breakpoint = 780
+	const breakpoint = 780;
 
 	useEffect(() => {
-		setWindowSize(window.innerWidth)
-	}, [])
+		setWindowSize(window.innerWidth);
+	}, []);
 
 	window.addEventListener("resize", () => {
-		setWindowSize(window.innerWidth)
-	})
+		setWindowSize(window.innerWidth);
+	});
 
 	const scrollHome = () => {
 		Scroll.scrollToTop();
@@ -146,18 +146,19 @@ const Footer = () => {
 	return (
 		<Container>
 			<Wrapper>
-				{windowSize > breakpoint ? <LinksContainer>
-					<LinksWrapper>
-						<LinkItems>
-							<FooterLink to='/'>Link</FooterLink>
-							<FooterLink to='/'>Link</FooterLink>
-							<FooterLink to='/'>Link</FooterLink>
-							<FooterLink to='/'>Link</FooterLink>
-							<FooterLink to='/'>Link</FooterLink>
-						</LinkItems>
-					</LinksWrapper>
-				</LinksContainer>
-				: null}
+				{windowSize > breakpoint ? (
+					<LinksContainer>
+						<LinksWrapper>
+							<LinkItems>
+								<FooterLink to='/'>Link</FooterLink>
+								<FooterLink to='/'>Link</FooterLink>
+								<FooterLink to='/'>Link</FooterLink>
+								<FooterLink to='/'>Link</FooterLink>
+								<FooterLink to='/'>Link</FooterLink>
+							</LinkItems>
+						</LinksWrapper>
+					</LinksContainer>
+				) : null}
 				<SocialMedia>
 					<SocialWrapper>
 						<Logo to='/' onClick={scrollHome}>
@@ -177,7 +178,13 @@ const Footer = () => {
 								href='gmail.google.com'
 								target='_blank'
 								aria-label='Email'>
-								<AiOutlineMail />
+								<ImMail />
+							</SocialIconLink>
+							<SocialIconLink
+								href='https://github.com/jake-utk'
+								target='_blank'
+								aria-label='github'>
+								<FaGithubSquare />
 							</SocialIconLink>
 						</SocialIcons>
 					</SocialWrapper>

@@ -6,7 +6,7 @@ import About from '../Components/About'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
 import Projects from '../Components/Projects'
-import Skills from '../Components/Skills'
+// import Skills from '../Components/Skills'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);

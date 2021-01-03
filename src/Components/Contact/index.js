@@ -128,7 +128,7 @@ const Contact = () => {
 							onChange={(event) => setContact(event.target.value)}
 							value={contact}
 						/>
-                        <FormButton to=''>Submit</FormButton>
+                        <FormButton to=''>Send</FormButton>
 					</Form>
 				</Content>
 			</Wrapper>
