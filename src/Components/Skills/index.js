@@ -1,6 +1,15 @@
 import React from "react";
-import { FaCss3Alt, FaReact } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import {
+	FaCss3Alt,
+	FaHtml5,
+	FaNode,
+	FaReact,
+	FaGit,
+	FaPython,
+} from "react-icons/fa";
+import { SiJavascript, SiAmericanexpress } from "react-icons/si";
+import { DiDjango, DiMongodb, DiPostgresql } from "react-icons/di";
+import { VscRegex } from "react-icons/vsc";
 import styled, { css } from "styled-components/macro";
 
 const Container = styled.div`
@@ -33,31 +42,38 @@ const Wrapper = styled.div`
 	max-width: 1000px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
 	grid-gap: 16px;
-	padding: 0 50px; // not sure
+	/* padding: 0 50px; // not sure */
 
-	@media screen and (max-width: 1000px) {
-		/* grid-template-columns: 1fr 1fr; */
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 
 	@media screen and (max-width: 780px) {
-		/* grid-template-columns: 1fr; */
+		grid-template-columns: 1fr 1fr 1fr;
 		padding: 0 20px;
 	}
 `;
 
 const Card = styled.div`
 	background: #646c79; // black coral
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	position: relative;
 	border-radius: 10px;
 	height: 200px;
 	width: 200px;
 	padding: 35px;
+
+	@media screen and (max-width: 1000px) {
+		height: 150px;
+		width: 150px;
+	}
+
+	@media screen and (max-width: 780px) {
+		height: 100px;
+		width: 100px;
+	}
 
 	&:hover {
 		transform: scale(1.1);
@@ -70,10 +86,20 @@ const Icon = css`
 	color: #e1e2e2; // platinum
 	height: 100px;
 	width: 100px;
+	position: absolute;
 	top: 50%;
-	bottom: 50%;
 	left: 50%;
-	right: 50%;
+	transform: translate(-50%, -50%);
+
+	@media screen and (max-width: 1000px) {
+		height: 75px;
+		width: 75px;
+	}
+
+	@media screen and (max-width: 780px) {
+		height: 50px;
+		width: 50px;
+	}
 `;
 
 const ReactIcon = styled(FaReact)`
@@ -85,6 +111,36 @@ const JsIcon = styled(SiJavascript)`
 `;
 
 const CssIcon = styled(FaCss3Alt)`
+	${Icon}
+`;
+
+const NodeIcon = styled(FaNode)`
+	${Icon}
+`;
+
+const ExpressIcon = styled(SiAmericanexpress)`
+	${Icon}
+`;
+
+const HtmlIcon = styled(FaHtml5)`
+	${Icon}
+`;
+const GitIcon = styled(FaGit)`
+	${Icon}
+`;
+const PythonIcon = styled(FaPython)`
+	${Icon}
+`;
+const DjangoIcon = styled(DiDjango)`
+	${Icon}
+`;
+const MongoIcon = styled(DiMongodb)`
+	${Icon}
+`;
+const PostgresIcon = styled(DiPostgresql)`
+	${Icon}
+`;
+const RegexIcon = styled(VscRegex)`
 	${Icon}
 `;
 
@@ -102,13 +158,33 @@ const Skills = () => {
 				<Card>
 					<CssIcon />
 				</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
-				<Card>Icon</Card>
+				<Card>
+					<NodeIcon />
+				</Card>
+				<Card>
+					<ExpressIcon />
+				</Card>
+				<Card>
+					<HtmlIcon />
+				</Card>
+				<Card>
+					<GitIcon />
+				</Card>
+				<Card>
+					<PythonIcon />
+				</Card>
+				<Card>
+					<DjangoIcon />
+				</Card>
+				<Card>
+					<MongoIcon />
+				</Card>
+				<Card>
+					<PostgresIcon />
+				</Card>
+				<Card>
+					<RegexIcon />
+				</Card>
 			</Wrapper>
 		</Container>
 	);

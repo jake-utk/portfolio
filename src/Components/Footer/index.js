@@ -98,6 +98,7 @@ const Logo = styled(Link)`
 
 	&:hover {
 		color: #9b1d20; // ruby red
+		transform: scale(1.2);
 		transition: 0.3s ease-out;
 	}
 `;
@@ -122,6 +123,7 @@ const SocialIconLink = styled.a`
 
 	&:hover {
 		color: #9b1d20;
+		transform: scale(1.2);
 		transition: 0.3s ease-out;
 	}
 `;
