@@ -39,22 +39,18 @@ const P = styled.p`
 	text-align: center;
 `;
 
-const Span = styled.span`
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-`;
+// const Span = styled.span`
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	z-index: 1;
+// `;
 
 const Project = ({ project }) => {
 	return (
 		<Card>
-			<a href={project.repo} target='_blank' rel='noreferrer'>
-				<Span></Span>
-			</a>
-
 			<Image src={project.image} />
 			<Title>{project.name}</Title>
 			<P>{project.description}</P>
