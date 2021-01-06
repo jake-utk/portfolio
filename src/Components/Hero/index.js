@@ -78,7 +78,7 @@ const H1 = styled.h1`
 const P = styled.p`
 	color: #e1e2e2; // platinum
 	font-size: 40px;
-	/* margin-top: 20px; */
+	margin-top: 20px;
 	max-width: 600px;
 	text-align: center;
 
@@ -140,6 +140,10 @@ const Hero = () => {
 					<H1>JAKE ADDIS</H1>
 					<Typist.Delay ms={300} />
 					<P>Software Engineer</P>
+					<Typist.Delay ms={300} />
+					<P>Nashville, TN</P>
+					<Typist.Backspace count={13} delay={300} />
+					<P>Remote</P>
 				</Typist>
 				<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
 					<Arrow visibility={arrowVisibility} />
