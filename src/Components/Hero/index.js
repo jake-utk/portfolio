@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Video from "../../videos/video.mp4";
 import styled from "styled-components";
-import Typist from "react-typist";
-import { ImArrowDown } from "react-icons/im";
-import { Link } from "react-scroll";
 
 const Container = styled.div`
 	align-items: center;
 	background: #1d1228; // eerie black
 	display: flex;
-	height: 100vh;
+	height: 800px;
 	justify-content: center;
 	padding: 0 28px;
 	position: relative;
@@ -91,59 +88,15 @@ const P = styled.p`
 	}
 `;
 
-const ArrowScroll = styled(Link)`
-	text-decoration: none;
-	cursor: pointer;
-`;
-
-const Arrow = styled(ImArrowDown)`
-	color: ${({ visibility }) => {
-		return visibility ? "#E1E2E2" : "transparent";
-	}};
-	height: 40px;
-	width: 40px;
-	-moz-animation: bounce 2s infinite;
-	-webkit-animation: bounce 2s infinite;
-	animation: bounce 2s infinite;
-
-	@keyframes bounce {
-		0%,
-		20%,
-		50%,
-		80%,
-		100% {
-			transform: translateY(0);
-		}
-		40% {
-			transform: translateY(-30px);
-		}
-		60% {
-			transform: translateY(-15px);
-		}
-	}
-`;
-
 const Hero = () => {
-	const [arrowVisibility, setArrowVisibility] = useState(false);
-
-	let showArrow = () => {
-		setArrowVisibility(true);
-	};
-
 	return (
 		<Container id='home'>
 			<Background>
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
-				<Typist avgTypingDelay={80} startDelay={500} onTypingDone={showArrow}>
-					<H1>JAKE ADDIS</H1>
-					<Typist.Delay ms={300} />
-					<P>Software Engineer</P>
-				</Typist>
-				<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
-					<Arrow visibility={arrowVisibility.toString()} />
-				</ArrowScroll>
+				<H1>JAKE ADDIS</H1>
+				<P>Software Engineer</P>
 			</Content>
 		</Container>
 	);
