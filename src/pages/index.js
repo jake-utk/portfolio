@@ -10,16 +10,8 @@ import { projects } from "../data/data";
 import Skills from "../Components/Skills";
 
 const Home = () => {
-	const [isOpen, setIsOpen] = useState(false);
-
-	const toggle = () => {
-		setIsOpen(!isOpen);
-	};
-
 	return (
 		<>
-			<Sidebar isOpen={isOpen} toggle={toggle} />
-			<Navigation toggle={toggle} />
 			<Hero />
 			<About />
 			<Contact />
