@@ -18,10 +18,11 @@ const NavWrapper = styled.nav`
 	position: sticky;
 	top: 0;
 	z-index: 10;
-	/* border-bottom: ${({ scrollValue }) => scrollValue ? "2.5px solid #F58549" : "transparent"}; */
+	/* border-bottom: ${({ scrollValue }) =>
+		scrollValue ? "2.5px solid #F58549" : "transparent"}; */
+	transition: 0.8s all ease;
 
 	@media screen and (max-width: 960px) {
-		transition: 0.8s all ease;
 	}
 `;
 
@@ -36,7 +37,8 @@ const Container = styled.div`
 `;
 
 const LogoRouter = styled(LinkRouter)`
-	color: #E1E2E2; // platinum
+	color: ${({ scrollValue }) =>
+		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -45,18 +47,46 @@ const LogoRouter = styled(LinkRouter)`
 	margin-left: 24px;
 	font-weight: bold;
 	text-decoration: none;
+	transition: 0.8s all ease;
 
 	@media screen and (max-width: 780px) {
 		margin-top: -10px;
 		font-size: 24px;
 	}
+
+	/* &:hover {
+		display: none;
+	} */
 `;
+
+// const LogoRouterHover = styled(LinkRouter)`
+// 	display: none;
+
+// 	&:hover {
+// 		color: ${({ scrollValue }) =>
+// 			scrollValue ? "#E1E2E2" : "transparent"}; // platinum
+// 		justify-self: flex-start;
+// 		cursor: pointer;
+// 		font-size: 60px;
+// 		display: flex;
+// 		align-items: center;
+// 		margin-left: 24px;
+// 		font-weight: bold;
+// 		text-decoration: none;
+// 		transition: 0.8s all ease;
+
+// 		@media screen and (max-width: 780px) {
+// 			margin-top: -10px;
+// 			font-size: 24px;
+// 		}
+// 	}
+// `;
 
 const BurgerButton = styled.div`
 	display: none;
 
 	@media screen and (max-width: 780px) {
-		color: #E1E2E2; // platinum
+		color: #e1e2e2; // platinum
 		cursor: pointer;
 		display: block;
 		font-size: 1.8rem;
@@ -85,7 +115,7 @@ const BurgerItem = styled.li`
 
 const BurgerLinkScroll = styled(LinkScroll)`
 	align-items: center;
-	color: #E1E2E2; // platinum
+	color: #e1e2e2; // platinum
 	cursor: pointer;
 	display: flex;
 	height: 100%;
@@ -99,6 +129,7 @@ const BurgerLinkScroll = styled(LinkScroll)`
 
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(false);
+	// const [mouseOver, setMouseOver] = useState(false);
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
@@ -123,6 +154,12 @@ const Nav = ({ toggle }) => {
 					<LogoRouter to='/' onClick={scrollHome}>
 						J/A
 					</LogoRouter>
+					{/* <LogoRouterHover
+						to='/'
+						scrollValue={scrollValue}
+						onClick={scrollHome}>
+						Jake / Addis
+					</LogoRouterHover> */}
 					<BurgerButton onClick={toggle}>
 						<FaBars />
 					</BurgerButton>
@@ -155,7 +192,11 @@ const Nav = ({ toggle }) => {
 							</BurgerLinkScroll>
 						</BurgerItem>
 						<BurgerItem>
-							<BurgerLinkScroll to='projects' exact='true' smooth={true} duration={500}>
+							<BurgerLinkScroll
+								to='projects'
+								exact='true'
+								smooth={true}
+								duration={500}>
 								Projects
 							</BurgerLinkScroll>
 						</BurgerItem>
