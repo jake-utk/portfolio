@@ -12,7 +12,7 @@ const Container = styled.aside`
 	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
 	position: fixed;
 	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-	transition: 0.3s ease-in-out;
+	transition: 0.5s ease-in-out;
 	width: 100%;
 	z-index: 20;
 `;

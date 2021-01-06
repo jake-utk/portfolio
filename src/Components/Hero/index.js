@@ -3,6 +3,7 @@ import Video from "../../videos/video.mp4";
 import styled from "styled-components";
 import Typist from "react-typist";
 import { ImArrowDown } from "react-icons/im";
+import { Link } from "react-scroll";
 
 const Container = styled.div`
 	align-items: center;
@@ -90,6 +91,11 @@ const P = styled.p`
 	}
 `;
 
+const ArrowScroll = styled(Link)`
+	text-decoration: none;
+	cursor: pointer;
+`;
+
 const Arrow = styled(ImArrowDown)`
 	color: ${({ visibility }) => {
 		return visibility ? "#E1E2E2" : "transparent";
@@ -135,8 +141,9 @@ const Hero = () => {
 					<Typist.Delay ms={300} />
 					<P>Software Engineer</P>
 				</Typist>
-
-				<Arrow visibility={arrowVisibility.toString()} />
+				<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
+					<Arrow visibility={arrowVisibility.toString()} />
+				</ArrowScroll>
 			</Content>
 		</Container>
 	);
