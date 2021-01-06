@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+// import GlobalStyle from "./globalStyles";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages";
 import Sidebar from "./Components/Sidebar";
@@ -20,6 +21,7 @@ function App() {
 
 	return (
 		<>
+			{/* <GlobalStyle /> */}
 			<Navigation toggle={toggle} />
 			<Sidebar isOpen={isOpen} toggle={toggle} />
 			<Switch>
