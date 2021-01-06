@@ -103,7 +103,7 @@ const Button = styled.a`
 	padding: 16px 50px;
 	color: #1d2228; // eerie black
 	font-size: 28px;
-	outline: 5px solid #646C79; // black coral
+	outline: 5px solid #646c79; // black coral
 	border: none;
 	cursor: pointer;
 	display: flex;
@@ -111,10 +111,10 @@ const Button = styled.a`
 	align-items: center;
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
-	
+
 	&:hover {
 		transition: all 0.2s ease-in-out;
-		background: #646C79; // black coral
+		background: #646c79; // black coral
 		color: #e1e2e2; // platinum
 		outline: 5px solid #e1e2e2; // platinum
 	}
@@ -144,9 +144,15 @@ const About = () => {
 					</ColumnOne>
 					<ColumnTwo>
 						<Content>
-							<Intro>Learn more...</Intro>
-							<H1>About me</H1>
-							<Description>
+							<Intro
+								data-aos='fade-right'
+								data-aos-duration='1000'
+								data-aos-once='true'
+								data-aos-anchor-placement='center-bottom'>
+								Learn more...
+							</Intro>
+							<H1 data-aos='fade-right'>About me</H1>
+							<Description data-aos='fade-right'>
 								I’m a software developer who designs object-oriented,
 								user-centric, and responsive applications that bring a
 								business’s idea to life. I leverage my technical, analytical,
