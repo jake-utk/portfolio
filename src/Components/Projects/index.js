@@ -57,7 +57,7 @@ const Projects = ({ projects }) => {
 		<Container id='projects'>
 			<H1>Projects</H1>
 			<Wrapper>
-				{projects.map((project, index) => {
+				{projects.reverse().map((project, index) => {
 					return <Project project={project} key={index} />;
 				})}
 			</Wrapper>
