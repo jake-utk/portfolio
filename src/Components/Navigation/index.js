@@ -39,6 +39,7 @@ const Container = styled.div`
 const LogoRouter = styled(LinkRouter)`
 	color: ${({ scrollValue }) =>
 		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
+	/* color: #e1e2e2; */
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -53,34 +54,7 @@ const LogoRouter = styled(LinkRouter)`
 		margin-top: -10px;
 		font-size: 24px;
 	}
-
-	/* &:hover {
-		display: none;
-	} */
 `;
-
-// const LogoRouterHover = styled(LinkRouter)`
-// 	display: none;
-
-// 	&:hover {
-// 		color: ${({ scrollValue }) =>
-// 			scrollValue ? "#E1E2E2" : "transparent"}; // platinum
-// 		justify-self: flex-start;
-// 		cursor: pointer;
-// 		font-size: 60px;
-// 		display: flex;
-// 		align-items: center;
-// 		margin-left: 24px;
-// 		font-weight: bold;
-// 		text-decoration: none;
-// 		transition: 0.8s all ease;
-
-// 		@media screen and (max-width: 780px) {
-// 			margin-top: -10px;
-// 			font-size: 24px;
-// 		}
-// 	}
-// `;
 
 const BurgerButton = styled.div`
 	display: none;
@@ -129,7 +103,6 @@ const BurgerLinkScroll = styled(LinkScroll)`
 
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(false);
-	// const [mouseOver, setMouseOver] = useState(false);
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
@@ -151,15 +124,9 @@ const Nav = ({ toggle }) => {
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollValue={scrollValue}>
 				<Container>
-					<LogoRouter to='/' onClick={scrollHome}>
+					<LogoRouter scrollValue={scrollValue} to='/' onClick={scrollHome}>
 						J/A
 					</LogoRouter>
-					{/* <LogoRouterHover
-						to='/'
-						scrollValue={scrollValue}
-						onClick={scrollHome}>
-						Jake / Addis
-					</LogoRouterHover> */}
 					<BurgerButton onClick={toggle}>
 						<CgMenuRight />
 					</BurgerButton>
