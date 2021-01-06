@@ -129,7 +129,7 @@ const BurgerLinkScroll = styled(LinkScroll)`
 
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(false);
-	const [mouseOver, setMouseOver] = useState(false);
+	// const [mouseOver, setMouseOver] = useState(false);
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
@@ -151,7 +151,7 @@ const Nav = ({ toggle }) => {
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollValue={scrollValue}>
 				<Container>
-					<LogoRouter to='/' scrollValue={scrollValue} onClick={scrollHome}>
+					<LogoRouter to='/' onClick={scrollHome}>
 						J/A
 					</LogoRouter>
 					{/* <LogoRouterHover

@@ -1,32 +1,33 @@
-import React, { useState } from 'react'
-import Navigation from '../Components/Navigation'
-import Sidebar from '../Components/Sidebar'
-import Hero from '../Components/Hero'
-import About from '../Components/About'
-import Contact from '../Components/Contact'
-import Footer from '../Components/Footer'
-import Projects from '../Components/Projects'
+import React, { useState } from "react";
+import Navigation from "../Components/Navigation";
+import Sidebar from "../Components/Sidebar";
+import Hero from "../Components/Hero";
+import About from "../Components/About";
+import Contact from "../Components/Contact";
+import Footer from "../Components/Footer";
+import Projects from "../Components/Projects";
+import { projects } from "../Components/Projects/data";
 // import Skills from '../Components/Skills'
 
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => {
-        setIsOpen(!isOpen)
-    }
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 
-    return (
-        <>
-            <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Navigation toggle={toggle} />
-            <Hero />
-            <About />
-            <Contact />
-            <Projects />
-            {/* <Skills /> */}
-            <Footer />
-        </>
-    )
-}
+	return (
+		<>
+			<Sidebar isOpen={isOpen} toggle={toggle} />
+			<Navigation toggle={toggle} />
+			<Hero />
+			<About />
+			<Contact />
+			<Projects projects={projects} />
+			{/* <Skills /> */}
+			<Footer />
+		</>
+	);
+};
 
-export default Home
+export default Home;
