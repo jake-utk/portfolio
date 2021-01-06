@@ -200,6 +200,15 @@ const Nav = ({ toggle }) => {
 								Projects
 							</BurgerLinkScroll>
 						</BurgerItem>
+						<BurgerItem>
+							<BurgerLinkScroll
+								to='skills'
+								exact='true'
+								smooth={true}
+								duration={500}>
+								Skills
+							</BurgerLinkScroll>
+						</BurgerItem>
 					</BurgerMenu>
 				</Container>
 			</NavWrapper>
