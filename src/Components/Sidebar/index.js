@@ -5,7 +5,7 @@ import { Link as LinkScroll } from "react-scroll";
 
 const Container = styled.aside`
 	align-items: center;
-	background: #1D2228; // eerie black
+	background: #1d2228; // eerie black
 	display: grid;
 	height: 100%;
 	left: 0;
@@ -28,27 +28,27 @@ const Icon = styled.div`
 `;
 
 const CloseIcon = styled(FaTimes)`
-	color: #E1E2E2; // platinum
+	color: #e1e2e2; // platinum
 `;
 
 const Wrapper = styled.div`
-	color: #E1E2E2; // platinum
+	color: #e1e2e2; // platinum
 `;
 
 const Menu = styled.ul`
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: repeat(4, 80px); // number of menu items
+	grid-template-rows: repeat(5, 80px); // number of menu items
 	text-align: center;
 
 	@media screen and (max-width: 480px) {
-		grid-template-rows: repeat(4, 60px); // number of menu items
+		grid-template-rows: repeat(5, 60px); // number of menu items
 	}
 `;
 
 const MenuLinkScroll = styled(LinkScroll)`
 	align-items: center;
-	color: #E1E2E2; // platinum
+	color: #e1e2e2; // platinum
 	cursor: pointer;
 	display: flex;
 	font-size: 1.5rem;
@@ -82,6 +82,9 @@ const Sidebar = ({ isOpen, toggle }) => {
 					</MenuLinkScroll>
 					<MenuLinkScroll to='projects' onClick={toggle}>
 						Projects
+					</MenuLinkScroll>
+					<MenuLinkScroll to='skills' onClick={toggle}>
+						Skills
 					</MenuLinkScroll>
 				</Menu>
 			</Wrapper>
