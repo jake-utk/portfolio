@@ -8,8 +8,8 @@ import { animateScroll as Scroll } from "react-scroll";
 
 const NavWrapper = styled.nav`
 	align-items: center;
-	background: ${({ scrollValue }) =>
-		scrollValue ? "#1d2228" : "transparent"}; // eerie black
+	background: ${(p) =>
+		p.scrollvalue ? "#1d2228" : "transparent"}; // eerie black
 	display: flex;
 	font-size: 1rem;
 	height: 80px;
@@ -18,8 +18,8 @@ const NavWrapper = styled.nav`
 	position: sticky;
 	top: 0;
 	z-index: 10;
-	/* border-bottom: ${({ scrollValue }) =>
-		scrollValue ? "2.5px solid #F58549" : "transparent"}; */
+	/* border-bottom: ${(p) =>
+		p.scrollvalue ? "2.5px solid #F58549" : "transparent"}; */
 	transition: 0.8s all ease;
 
 	@media screen and (max-width: 960px) {
@@ -37,9 +37,7 @@ const Container = styled.div`
 `;
 
 const LogoRouter = styled(LinkRouter)`
-	color: ${({ scrollValue }) =>
-		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
-	/* color: #e1e2e2; */
+	color: ${(p) => (p.scrollvalue ? "#E1E2E2" : "transparent")}; // platinum
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -103,6 +101,7 @@ const BurgerLinkScroll = styled(LinkScroll)`
 
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(false);
+	const pages = ["Home", "About", "Contact", "Projects", "Skills"];
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
@@ -122,60 +121,27 @@ const Nav = ({ toggle }) => {
 
 	return (
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
-			<NavWrapper scrollValue={scrollValue}>
+			<NavWrapper scrollvalue={scrollValue}>
 				<Container>
-					<LogoRouter scrollValue={scrollValue} to='/' onClick={scrollHome}>
+					<LogoRouter scrollvalue={scrollValue} to='/' onClick={scrollHome}>
 						J/A
 					</LogoRouter>
 					<BurgerButton onClick={toggle}>
 						<CgMenuRight />
 					</BurgerButton>
 					<BurgerMenu>
-						<BurgerItem>
-							<BurgerLinkScroll
-								to='home'
-								exact='true'
-								smooth={true}
-								duration={500}>
-								Home
-							</BurgerLinkScroll>
-						</BurgerItem>
-						<BurgerItem>
-							<BurgerLinkScroll
-								to='about'
-								exact='true'
-								smooth={true}
-								duration={500}>
-								About
-							</BurgerLinkScroll>
-						</BurgerItem>
-						<BurgerItem>
-							<BurgerLinkScroll
-								to='contact'
-								exact='true'
-								smooth={true}
-								duration={500}>
-								Contact
-							</BurgerLinkScroll>
-						</BurgerItem>
-						<BurgerItem>
-							<BurgerLinkScroll
-								to='projects'
-								exact='true'
-								smooth={true}
-								duration={500}>
-								Projects
-							</BurgerLinkScroll>
-						</BurgerItem>
-						<BurgerItem>
-							<BurgerLinkScroll
-								to='skills'
-								exact='true'
-								smooth={true}
-								duration={500}>
-								Skills
-							</BurgerLinkScroll>
-						</BurgerItem>
+						{pages.map((page, i) => (
+							<BurgerItem key={i}>
+								<BurgerLinkScroll
+									to={page.toLowerCase()}
+									exact='true'
+									smooth={true}
+									duration={500}
+									key={i}>
+									{page}
+								</BurgerLinkScroll>
+							</BurgerItem>
+						))}
 					</BurgerMenu>
 				</Container>
 			</NavWrapper>
