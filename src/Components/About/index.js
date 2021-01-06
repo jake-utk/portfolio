@@ -139,7 +139,13 @@ const About = () => {
 				<Row>
 					<ColumnOne>
 						<ImgContainer>
-							<Img src={Image} alt='Picture of Jake' />
+							<Img
+								src={Image}
+								alt='Picture of Jake'
+								data-aos='zoom-in'
+								data-aos-duration='1000'
+								data-aos-anchor-placement='center bottom'
+							/>
 						</ImgContainer>
 					</ColumnOne>
 					<ColumnTwo>
@@ -147,12 +153,19 @@ const About = () => {
 							<Intro
 								data-aos='fade-right'
 								data-aos-duration='1000'
-								data-aos-once='true'
 								data-aos-anchor-placement='center-bottom'>
 								Learn more...
 							</Intro>
-							<H1 data-aos='fade-right'>About me</H1>
-							<Description data-aos='fade-right'>
+							<H1
+								data-aos='fade-right'
+								data-aos-duration='1000'
+								data-aos-anchor-placement='center-bottom'>
+								About me
+							</H1>
+							<Description
+								data-aos='fade-right'
+								data-aos-duration='1000'
+								data-aos-anchor-placement='center-bottom'>
 								I’m a software developer who designs object-oriented,
 								user-centric, and responsive applications that bring a
 								business’s idea to life. I leverage my technical, analytical,
@@ -162,7 +175,13 @@ const About = () => {
 								a team environment.
 							</Description>
 							<ButtonContainer>
-								<Button href={Resume} target='_blank' rel='noreferrer'>
+								<Button
+									href={Resume}
+									target='_blank'
+									rel='noreferrer'
+									data-aos='fade-right'
+									data-aos-duration='1000'
+									data-aos-anchor-placement='center-bottom'>
 									Resume
 								</Button>
 							</ButtonContainer>
