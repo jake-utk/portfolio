@@ -6,7 +6,7 @@ const Container = styled.div`
 	align-items: center;
 	background: #1d1228; // eerie black
 	display: flex;
-	height: 800px;
+	height: 100vh;
 	justify-content: center;
 	padding: 0 28px;
 	position: relative;
