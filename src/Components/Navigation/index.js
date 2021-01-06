@@ -39,7 +39,6 @@ const Container = styled.div`
 const LogoRouter = styled(LinkRouter)`
 	color: ${({ scrollValue }) =>
 		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
-	/* color: #e1e2e2; */
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -124,7 +123,7 @@ const Nav = ({ toggle }) => {
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollValue={scrollValue}>
 				<Container>
-					<LogoRouter scrollValue={scrollValue} to='/' onClick={scrollHome}>
+					<LogoRouter to='/' onClick={scrollHome}>
 						J/A
 					</LogoRouter>
 					<BurgerButton onClick={toggle}>
