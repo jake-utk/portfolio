@@ -4,7 +4,7 @@ import Project from "../Project";
 
 const Container = styled.div`
 	background-color: #1d2228;
-	height: 800px;
+	height: 900px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,7 +19,7 @@ const Container = styled.div`
 	}
 
 	@media screen and (max-width: 480px) {
-		height: 1800px;
+		height: 2000px;
 	}
 `;
 
@@ -53,8 +53,6 @@ const Wrapper = styled.div`
 `;
 
 const Projects = ({ projects }) => {
-	console.log(projects);
-
 	return (
 		<Container id='projects'>
 			<H1>Projects</H1>

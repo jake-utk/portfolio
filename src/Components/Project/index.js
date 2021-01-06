@@ -8,7 +8,7 @@ const Card = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	border-radius: 10px;
-	max-height: 340px;
+	height: 340px;
 	padding: 30px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	transition: all 0.2s ease-in-out;
@@ -20,16 +20,17 @@ const Card = styled.div`
 	}
 `;
 
-const Icon = styled.img`
-	height: 160px;
-	width: 160px;
+const Image = styled.img`
+	max-height: 200px;
+	max-width: 225px;
 	margin-bottom: 10px;
 `;
 
-const H2 = styled.h2`
+const Title = styled.h2`
 	color: #e1e2e2;
 	font-size: 1rem;
 	margin-bottom: 10px;
+	text-decoration: none;
 `;
 
 const P = styled.p`
@@ -38,14 +39,26 @@ const P = styled.p`
 	text-align: center;
 `;
 
-const Project = ({ project }) => {
-	console.log(project);
+const Span = styled.span`
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+`;
 
+const Project = ({ project }) => {
 	return (
 		<Card>
-			<Icon src={project.image} />
-			<H2>{project.name}</H2>
+			<a href={project.repo} target='_blank' rel='noreferrer'>
+				<Span></Span>
+			</a>
+
+			<Image src={project.image} />
+			<Title>{project.name}</Title>
 			<P>{project.description}</P>
+			<P></P>
 		</Card>
 	);
 };

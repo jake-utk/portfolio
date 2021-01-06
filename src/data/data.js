@@ -1,15 +1,16 @@
-import ImageOne from "../../images/simon.png";
-import ImageTwo from "../../images/query-tech.png";
-import ImageThree from "../../images/curatr.png";
-import ImageFour from "../../images/921steak.png";
-import ImageFive from "../../images/portfolio.png";
+import ImageOne from "../images/simon.png";
+import ImageTwo from "../images/query-tech.png";
+import ImageThree from "../images/curatr.png";
+import ImageFour from "../images/921steak.png";
+import ImageFive from "../images/portfolio.png";
 
 export const projects = [
 	{
 		id: 1,
 		name: "Simon Guitar Hero",
-		description: "Simon Says game made exclusively in vanilla Javascript.",
-		image: { ImageOne },
+		description:
+			"Simon Says game made exclusively in vanilla Javascript, HTML5, CSS3, and DOM manipulation.",
+		image: require("../images/simon.png").default,
 		url: "https://jake-utk.github.io/simon-guitar-project/",
 		repo: "https://github.com/jake-utk/simon-guitar-project",
 		language: "JavaScript",
@@ -21,7 +22,7 @@ export const projects = [
 		name: "query(Tech)",
 		description:
 			"Search application using the popular Hacker News API built in React.",
-		image: { ImageTwo },
+		image: require("../images/query-tech.png").default,
 		url: "http://querytech.herokuapp.com/",
 		repo: "https://github.com/jake-utk/query-tech",
 		language: "JavaScript",
@@ -31,9 +32,8 @@ export const projects = [
 	{
 		id: 3,
 		name: "Curatr",
-		description:
-			"A game list aggregator that allows users to group titles by their association of choice, built in React.",
-		image: { ImageThree },
+		description: "A game list aggregator created by users, built in React.",
+		image: require("../images/curatr.png").default,
 		url: "https://curatrp3ga.herokuapp.com/",
 		repo: "https://github.com/Davinki-Coders/Project-3-fe",
 		language: "JavaScript",
@@ -45,7 +45,7 @@ export const projects = [
 		name: "921steak",
 		description:
 			"A modern restaurant template full-stack website, built in React.",
-		image: { ImageFour },
+		image: require("../images/921steak.png").default,
 		url: "http://www.921steak.com",
 		repo: "https://github.com/REST-a-site/project-4-fe",
 		language: "JavaScript",
@@ -56,7 +56,7 @@ export const projects = [
 		id: 5,
 		name: "Portfolio",
 		description: "A portfolio website built in React.",
-		image: { ImageFive },
+		image: require("../images/portfolio.png").default,
 		url: "https://www.jakeaddis.com/",
 		repo: "https://github.com/jake-utk/portfolio-resume",
 		language: "JavaScript",
