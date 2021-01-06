@@ -150,6 +150,8 @@ const RegexIcon = styled(VscRegex)`
 `;
 
 const Skills = () => {
+	let skills = [];
+
 	return (
 		<Container id='skills'>
 			<H1>Skills</H1>
