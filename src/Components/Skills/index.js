@@ -79,6 +79,7 @@ const Card = styled.div`
 		transform: scale(1.1);
 		transition: all 0.4s ease-in-out;
 		cursor: pointer;
+		color: #f58549; // mango tango
 	}
 `;
 
@@ -99,6 +100,10 @@ const Icon = css`
 	@media screen and (max-width: 780px) {
 		height: 50px;
 		width: 50px;
+	}
+
+	&:hover {
+		/* color: #f58549; // mango tango */
 	}
 `;
 

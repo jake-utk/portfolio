@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import { CgMenuRight } from "react-icons/cg";
 import { IconContext } from "react-icons/lib";
 import styled from "styled-components";
 import { Link as LinkRouter } from "react-router-dom";
@@ -161,7 +161,7 @@ const Nav = ({ toggle }) => {
 						Jake / Addis
 					</LogoRouterHover> */}
 					<BurgerButton onClick={toggle}>
-						<FaBars />
+						<CgMenuRight />
 					</BurgerButton>
 					<BurgerMenu>
 						<BurgerItem>

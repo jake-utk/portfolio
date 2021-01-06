@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
+import { FaRegTimesCircle } from "react-icons/fa";
 import { Link as LinkScroll } from "react-scroll";
 
 const Container = styled.aside`
@@ -27,7 +27,7 @@ const Icon = styled.div`
 	top: 1.2rem;
 `;
 
-const CloseIcon = styled(FaTimes)`
+const CloseIcon = styled(FaRegTimesCircle)`
 	color: #e1e2e2; // platinum
 `;
 
