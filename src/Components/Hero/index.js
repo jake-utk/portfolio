@@ -8,23 +8,11 @@ const Container = styled.div`
 	align-items: center;
 	background: #1d1228; // eerie black
 	display: flex;
-	height: 1400px;
+	height: 100vh;
 	justify-content: center;
 	padding: 0 28px;
 	position: relative;
 	z-index: 1;
-
-	@media screen and (max-width: 1000px) {
-		height: 1200px;
-	}
-
-	@media screen and (max-width: 780px) {
-		height: 950px;
-	}
-
-	@media screen and (max-width: 480px) {
-		height: 800px;
-	}
 
 	:before {
 		content: "";
