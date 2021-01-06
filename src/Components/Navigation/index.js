@@ -37,6 +37,9 @@ const Container = styled.div`
 `;
 
 const LogoRouter = styled(LinkRouter)`
+	color: ${({ scrollValue }) =>
+		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
+	/* color: #e1e2e2; */
 	justify-self: flex-start;
 	cursor: pointer;
 	font-size: 60px;
@@ -51,11 +54,6 @@ const LogoRouter = styled(LinkRouter)`
 		margin-top: -10px;
 		font-size: 24px;
 	}
-`;
-
-const LogoText = styled.div`
-	color: ${({ scrollValue }) =>
-		scrollValue ? "#E1E2E2" : "transparent"}; // platinum
 `;
 
 const BurgerButton = styled.div`
@@ -126,10 +124,9 @@ const Nav = ({ toggle }) => {
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollValue={scrollValue}>
 				<Container>
-					<LogoRouter to='/' onClick={scrollHome}>
-						<LogoText scrollValue={scrollValue}>J/A</LogoText>
+					<LogoRouter scrollValue={scrollValue} to='/' onClick={scrollHome}>
+						J/A
 					</LogoRouter>
-
 					<BurgerButton onClick={toggle}>
 						<CgMenuRight />
 					</BurgerButton>
