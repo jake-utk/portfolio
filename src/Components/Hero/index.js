@@ -1,6 +1,7 @@
 import React from "react";
 import Video from "../../videos/video.mp4";
 import styled from "styled-components";
+import Typist from "react-typist";
 
 const Container = styled.div`
 	align-items: center;
@@ -95,8 +96,11 @@ const Hero = () => {
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
-				<H1>JAKE ADDIS</H1>
-				<P>Software Engineer</P>
+				<Typist avgTypingDelay={80} startDelay={500}>
+					<H1>JAKE ADDIS</H1>
+					<Typist.Delay ms={300} />
+					<P>Software Engineer</P>
+				</Typist>
 			</Content>
 		</Container>
 	);
