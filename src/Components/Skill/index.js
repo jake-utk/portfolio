@@ -105,29 +105,16 @@ const RegexIcon = styled(VscRegex)`
 `;
 
 const Skill = ({ skill, index }) => {
-	let icons = [
-		{ react: ReactIcon },
-		{ js: JsIcon },
-		{ css: CssIcon },
-		{ node: NodeIcon },
-		{ express: ExpressIcon },
-		{ html: HtmlIcon },
-		{ git: GitIcon },
-		{ python: PythonIcon },
-		{ django: DjangoIcon },
-		{ mongo: MongoIcon },
-		{ postgres: PostgresIcon },
-		{ regex: RegexIcon },
-	];
-
+	console.log(skill);
 	return (
 		<Card
 			data-aos='zoom-in'
 			data-aos-easing='ease-in-back'
 			data-aos-delay='500'
 			data-aos-offset='0'
+			index={index}
 			data-aos-anchor-placement='center bottom'>
-			{icons[index].value}
+			<ReactIcon />
 		</Card>
 	);
 };

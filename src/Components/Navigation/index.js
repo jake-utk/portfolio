@@ -34,6 +34,7 @@ const Container = styled.div`
 	padding: 0 24px;
 	width: 100%;
 	z-index: 1;
+	/* overflow: hidden; // OVERFLOW HERE */
 `;
 
 const LogoRouter = styled(LinkRouter)`

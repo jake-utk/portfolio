@@ -15,6 +15,7 @@ const Container = styled.aside`
 	transition: 0.3s ease-in-out;
 	width: 100%;
 	z-index: 20;
+	/* overflow: hidden; */
 `;
 
 const Icon = styled.div`

@@ -6,6 +6,7 @@ import Resume from "../../docs/Resume.pdf";
 const Container = styled.div`
 	background: #1d2228; // eerie black
 	color: #e1e2e2; // platinum
+	/* overflow: hidden; */
 
 	@media screen and (max-width: 780px) {
 		padding: 100px 0;
@@ -129,10 +130,17 @@ const Img = styled.div`
 	background: url(${Image});
 	background-position: 65% 0;
 	background-size: cover;
-	height: 300px;
+	height: 500px;
 	margin: 0 0 10px 0;
 	padding-right: 0;
-	width: 300px;
+	width: 500px;
+
+	@media screen and (max-width: 480px) {
+		height: 400px;
+		width: 250px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 `;
 
 const About = () => {
@@ -141,14 +149,14 @@ const About = () => {
 			<Wrapper>
 				<Row>
 					<ColumnOne>
-						<ImgContainer>
+						{/* <ImgContainer>
 							<Img
 								alt='Picture of Jake'
 								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center bottom'
 							/>
-						</ImgContainer>
+						</ImgContainer> */}
 					</ColumnOne>
 					<ColumnTwo>
 						<Content>

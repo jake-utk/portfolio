@@ -9,6 +9,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* overflow: hidden; */
 
 	@media screen and (max-width: 1000px) {
 	}
@@ -63,6 +64,21 @@ const Skills = () => {
 		"regex",
 	];
 
+	const icons = {
+		react: "ReactIcon",
+		js: "JsIcon",
+		css: "CssIcon",
+		node: "NodeIcon",
+		express: "ExpressIcon",
+		html: "HtmlIcon",
+		git: "GitIcon",
+		python: "PythonIcon",
+		django: "DjangoIcon",
+		mongo: "MongoIcon",
+		postgres: "PostgresIcon",
+		regex: "RegexIcon",
+	};
+
 	return (
 		<Container id='skills'>
 			<H1
@@ -75,7 +91,7 @@ const Skills = () => {
 			</H1>
 			<Wrapper>
 				{skills.map((skill, index) => {
-					return <Skill skill={skill} index={index} key={index} />;
+					return <Skill skill={icons[skill]} index={index} key={index} />;
 				})}
 			</Wrapper>
 		</Container>

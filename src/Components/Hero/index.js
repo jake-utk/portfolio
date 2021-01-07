@@ -36,7 +36,7 @@ const Background = styled.div`
 	bottom: 0;
 	height: 100%;
 	left: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 	position: absolute;
 	right: 0;
 	top: 0;
