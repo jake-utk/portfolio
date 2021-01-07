@@ -60,6 +60,7 @@ const Content = styled.div`
 	position: absolute;
 	z-index: 3;
 `;
+
 const H1 = styled.h1`
 	color: #e1e2e2; // platinum
 	font-size: 92px;
@@ -94,17 +95,22 @@ const P = styled.p`
 const ArrowScroll = styled(Link)`
 	text-decoration: none;
 	cursor: pointer;
+	position: absolute;
+	bottom: 10%;
+	z-index: 10;
 `;
 
 const Arrow = styled(ImArrowDown)`
-	color: ${(p) => {
-		return p.visibility ? "#E1E2E2" : "transparent";
+	opacity: ${(p) => {
+		return p.visibility ? "1" : "0";
 	}};
+	color: #e1e2e2;
 	height: 40px;
 	width: 40px;
 	-moz-animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
-	animation: bounce 2s infinite;
+	animation: bounce 1.25s infinite;
+	transition: opacity 200ms;
 
 	@keyframes bounce {
 		0%,
@@ -145,10 +151,10 @@ const Hero = () => {
 					<Typist.Backspace count={13} delay={300} />
 					<P>Remote</P>
 				</Typist>
-				<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
-					<Arrow visibility={arrowVisibility} />
-				</ArrowScroll>
 			</Content>
+			<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
+				<Arrow visibility={arrowVisibility} />
+			</ArrowScroll>
 		</Container>
 	);
 };
