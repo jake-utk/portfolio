@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './pages'
-
-
+// import GlobalStyle from "./globalStyles";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages";
+import Sidebar from "./Components/Sidebar";
+import Navigation from "./Components/Navigation";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path='/' component={Home} exact />
-      </Switch>
-    </Router>
-  );
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
+
+	useEffect(() => {
+		Aos.init({});
+	}, []);
+
+	return (
+		<>
+			{/* <GlobalStyle /> */}
+			<Navigation toggle={toggle} />
+			<Sidebar isOpen={isOpen} toggle={toggle} />
+			<Switch>
+				<Route path='/' component={Home} exact />
+			</Switch>
+		</>
+	);
 }
 
 export default App;

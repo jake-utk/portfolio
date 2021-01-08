@@ -1,9 +1,3 @@
-import ImageOne from "../images/simon.png";
-import ImageTwo from "../images/query-tech.png";
-import ImageThree from "../images/curatr.png";
-import ImageFour from "../images/921steak.png";
-import ImageFive from "../images/portfolio.png";
-
 export const projects = [
 	{
 		id: 1,

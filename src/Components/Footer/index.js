@@ -177,7 +177,7 @@ const Footer = () => {
 								<FaLinkedin />
 							</SocialIconLink>
 							<SocialIconLink
-								href='gmail.google.com'
+								href='mailto:hireme@jakeaddis.com'
 								target='_blank'
 								aria-label='Email'>
 								<ImMail />

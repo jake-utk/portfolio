@@ -100,14 +100,14 @@ const BurgerLinkScroll = styled(LinkScroll)`
 `;
 
 const Nav = ({ toggle }) => {
-	const [scrollValue, setScrollValue] = useState(false);
+	const [scrollValue, setScrollValue] = useState(0);
 	const pages = ["Home", "About", "Contact", "Projects", "Skills"];
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
-			setScrollValue(true);
+			setScrollValue(1);
 		} else {
-			setScrollValue(false);
+			setScrollValue(0);
 		}
 	};
 
