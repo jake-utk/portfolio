@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../../Components/Styles";
+import Image from "../../images/IMG_4485.JPG";
 
 const Container = styled.div`
 	background: #e1e2e2; // platinum
@@ -87,6 +88,50 @@ const InputTextArea = styled.textarea`
 	resize: none;
 `;
 
+const Row = styled.div`
+	align-items: center;
+	display: grid;
+	grid-auto-columns: minmax(auto, 1fr);
+	grid-template-areas: "col2 col1";
+
+	@media screen and (max-width: 780px) {
+		grid-template-areas: "col1" "col2";
+	}
+`;
+
+const ColumnOne = styled.div`
+	grid-area: col1;
+	margin-bottom: 15px;
+	padding: 0 15px;
+`;
+
+const ColumnTwo = styled.div`
+	grid-area: col2;
+	margin-bottom: 15px;
+	padding: 0 15px;
+`;
+
+const ImgContainer = styled.div`
+	height: 100%;
+	max-width: 555px;
+`;
+
+const Img = styled.div`
+	background: url(${Image});
+	background-position: 65% 0;
+	background-size: cover;
+	height: 550px;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 400px;
+	padding: 40px 32px;
+	z-index: 1;
+
+	@media screen and (max-width: 780px) {
+		display: none;
+	}
+`;
+
 const Contact = () => {
 	const [contact, setContact] = useState();
 	const [name, setName] = useState();
@@ -94,45 +139,54 @@ const Contact = () => {
 
 	return (
 		<Container id='contact'>
-			<Wrapper
-				data-aos='zoom-in'
-				data-aos-duration='1000'
-				data-aos-anchor-placement='center bottom'>
-				<Content>
-					<Form>
-						<H1>Contact Me</H1>
-						<Label htmlFor='name'>Name:</Label>
-						<InputTextArea
-							type='text'
-							rows='3'
-							id='name'
-							form='nameform'
-							onChange={(event) => setName(event.target.value)}
-							value={name}
-						/>
-						<Label htmlFor='email'>Email:</Label>
-						<InputTextArea
-							type='text'
-							rows='3'
-							name='email'
-							id='email'
-							form='emailform'
-							onChange={(event) => setEmail(event.target.value)}
-							value={email}
-						/>
-						<Label htmlFor='message'>Message:</Label>
-						<InputTextArea
-							type='text'
-							rows='8'
-							name='details'
-							id='details'
-							form='detailsform'
-							onChange={(event) => setContact(event.target.value)}
-							value={contact}
-						/>
-						<FormButton to=''>Send</FormButton>
-					</Form>
-				</Content>
+			<Wrapper>
+				<Row>
+					<ColumnOne>
+						<ImgContainer>
+							<Img alt='Picture of ' />
+						</ImgContainer>
+					</ColumnOne>
+					<ColumnTwo>
+						<Content>
+							<Form
+								data-aos='zoom-in'
+								data-aos-duration='1000'
+								data-aos-anchor-placement='center bottom'>
+								<H1>Contact Me</H1>
+								<Label htmlFor='name'>Name:</Label>
+								<InputTextArea
+									type='text'
+									rows='3'
+									id='name'
+									form='nameform'
+									onChange={(event) => setName(event.target.value)}
+									value={name}
+								/>
+								<Label htmlFor='email'>Email:</Label>
+								<InputTextArea
+									type='text'
+									rows='3'
+									name='email'
+									id='email'
+									form='emailform'
+									onChange={(event) => setEmail(event.target.value)}
+									value={email}
+								/>
+								<Label htmlFor='message'>Message:</Label>
+								<InputTextArea
+									type='text'
+									rows='8'
+									name='details'
+									id='details'
+									form='detailsform'
+									onChange={(event) => setContact(event.target.value)}
+									value={contact}
+								/>
+								<FormButton to=''>Send</FormButton>
+							</Form>
+						</Content>
+					</ColumnTwo>
+				</Row>
 			</Wrapper>
 		</Container>
 	);
