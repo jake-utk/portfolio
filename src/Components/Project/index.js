@@ -42,9 +42,9 @@ const P = styled.p`
 const Project = ({ project }) => {
 	let fadeDirection = (id) => {
 		if (id % 2 === 0) {
-			return "zoom-in-right";
+			return "fade-zoom-in";
 		} else {
-			return "zoom-in-left";
+			return "fade-zoom-in";
 		}
 	};
 
