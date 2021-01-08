@@ -19,6 +19,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 
 	@media screen and (max-width: 1000px) {
 	}
@@ -54,6 +55,11 @@ const Wrapper = styled.div`
 	@media screen and (max-width: 780px) {
 		grid-template-columns: repeat(3, 1fr);
 		padding: 0 20px;
+	}
+
+	@media screen and (max-width: 380px) {
+		grid-template-columns: repeat(2, 1fr);
+		padding-bottom: 40px;
 	}
 `;
 

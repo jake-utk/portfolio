@@ -7,6 +7,7 @@ import { ImMail } from "react-icons/im";
 
 const Container = styled.footer`
 	background-color: #1d2228;
+	overflow: hidden;
 `;
 
 const Wrapper = styled.div`
