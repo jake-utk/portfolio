@@ -107,8 +107,8 @@ const Arrow = styled(ImArrowDown)`
 	color: #e1e2e2;
 	height: 40px;
 	width: 40px;
-	-moz-animation: bounce 2s infinite;
-	-webkit-animation: bounce 2s infinite;
+	-moz-animation: bounce 1.25s infinite;
+	-webkit-animation: bounce 1.25s infinite;
 	animation: bounce 1.25s infinite;
 	transition: opacity 200ms;
 
@@ -130,10 +130,10 @@ const Arrow = styled(ImArrowDown)`
 `;
 
 const Hero = () => {
-	const [arrowVisibility, setArrowVisibility] = useState(false);
+	const [arrowVisibility, setArrowVisibility] = useState(0);
 
 	let showArrow = () => {
-		setArrowVisibility(true);
+		setArrowVisibility(1);
 	};
 
 	return (

@@ -125,11 +125,14 @@ const ImgContainer = styled.div`
 	max-width: 555px;
 `;
 
-const Img = styled.img`
+const Img = styled.div`
+	background: url(${Image});
+	background-position: 65% 0;
+	background-size: cover;
+	height: 300px;
 	margin: 0 0 10px 0;
 	padding-right: 0;
-	width: 100%;
-	border-radius: 100%;
+	width: 300px;
 `;
 
 const About = () => {
@@ -140,7 +143,6 @@ const About = () => {
 					<ColumnOne>
 						<ImgContainer>
 							<Img
-								src={Image}
 								alt='Picture of Jake'
 								data-aos='zoom-in'
 								data-aos-duration='1000'
