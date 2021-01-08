@@ -55,7 +55,14 @@ const Wrapper = styled.div`
 const Projects = ({ projects }) => {
 	return (
 		<Container id='projects'>
-			<H1>Projects</H1>
+			<H1
+				data-aos='zoom-out'
+				data-aos-easing='ease-in-back'
+				data-aos-delay='300'
+				data-aos-offset='0'
+				data-aos-anchor-placement='center bottom'>
+				Projects
+			</H1>
 			<Wrapper>
 				{projects.reverse().map((project, index) => {
 					return <Project project={project} key={index} />;
