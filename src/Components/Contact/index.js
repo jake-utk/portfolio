@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1100px;
-	padding: 0 24px;
+	/* padding: 0 24px; */
 	width: 100%;
 	z-index: 1;
 	display: flex;
@@ -34,16 +34,24 @@ const Wrapper = styled.div`
 	@media screen and (max-width: 400px) {
 		height: 80%;
 	}
+
+	@media screen and (max-width: 780px) {
+		// code
+	}
 `;
 
 const Content = styled.div`
 	display: flex;
-	flex-direction: column;
 	height: 100%;
 	justify-content: center;
+	flex-direction: row;
 
 	@media screen and (max-width: 480px) {
 		padding: 10px;
+	}
+	@media screen and (max-width: 780px) {
+		flex-direction: column;
+		// code
 	}
 `;
 
@@ -53,7 +61,7 @@ const Form = styled.form`
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 	display: grid;
 	height: auto;
-	margin: 0 auto;
+	margin: auto;
 	max-width: 400px;
 	padding: 40px 32px;
 	width: 100%;
@@ -88,41 +96,23 @@ const InputTextArea = styled.textarea`
 	resize: none;
 `;
 
-const Row = styled.div`
-	align-items: center;
-	display: grid;
-	grid-auto-columns: minmax(auto, 1fr);
-	grid-template-areas: "col2 col1";
-
-	@media screen and (max-width: 780px) {
-		grid-template-areas: "col1" "col2";
-	}
-`;
-
-const ColumnOne = styled.div`
-	grid-area: col1;
-	margin-bottom: 15px;
-	padding: 0 15px;
-`;
-
-const ColumnTwo = styled.div`
-	grid-area: col2;
-	margin-bottom: 15px;
-	padding: 0 15px;
-`;
-
 const ImgContainer = styled.div`
 	height: 100%;
 	max-width: 555px;
+
+	@media screen and (max-width: 780px) {
+		display: none;
+	}
 `;
 
 const Img = styled.div`
 	background: url(${Image});
 	background-position: 65% 0;
 	background-size: cover;
+	border-radius: 4px;
 	height: 550px;
-	width: 100%;
-	margin: 0 auto;
+	width: 400px;
+	margin: auto;
 	max-width: 400px;
 	padding: 40px 32px;
 	z-index: 1;
@@ -140,53 +130,47 @@ const Contact = () => {
 	return (
 		<Container id='contact'>
 			<Wrapper>
-				<Row>
-					<ColumnOne>
-						<ImgContainer>
-							<Img alt='Picture of ' />
-						</ImgContainer>
-					</ColumnOne>
-					<ColumnTwo>
-						<Content>
-							<Form
-								data-aos='zoom-in'
-								data-aos-duration='1000'
-								data-aos-anchor-placement='center bottom'>
-								<H1>Contact Me</H1>
-								<Label htmlFor='name'>Name:</Label>
-								<InputTextArea
-									type='text'
-									rows='3'
-									id='name'
-									form='nameform'
-									onChange={(event) => setName(event.target.value)}
-									value={name}
-								/>
-								<Label htmlFor='email'>Email:</Label>
-								<InputTextArea
-									type='text'
-									rows='3'
-									name='email'
-									id='email'
-									form='emailform'
-									onChange={(event) => setEmail(event.target.value)}
-									value={email}
-								/>
-								<Label htmlFor='message'>Message:</Label>
-								<InputTextArea
-									type='text'
-									rows='8'
-									name='details'
-									id='details'
-									form='detailsform'
-									onChange={(event) => setContact(event.target.value)}
-									value={contact}
-								/>
-								<FormButton to=''>Send</FormButton>
-							</Form>
-						</Content>
-					</ColumnTwo>
-				</Row>
+				<Content>
+					<Form
+						data-aos='zoom-in'
+						data-aos-duration='1000'
+						data-aos-anchor-placement='center bottom'>
+						<H1>Contact Me</H1>
+						<Label htmlFor='name'>Name:</Label>
+						<InputTextArea
+							type='text'
+							rows='3'
+							id='name'
+							form='nameform'
+							onChange={(event) => setName(event.target.value)}
+							value={name}
+						/>
+						<Label htmlFor='email'>Email:</Label>
+						<InputTextArea
+							type='text'
+							rows='3'
+							name='email'
+							id='email'
+							form='emailform'
+							onChange={(event) => setEmail(event.target.value)}
+							value={email}
+						/>
+						<Label htmlFor='message'>Message:</Label>
+						<InputTextArea
+							type='text'
+							rows='8'
+							name='details'
+							id='details'
+							form='detailsform'
+							onChange={(event) => setContact(event.target.value)}
+							value={contact}
+						/>
+						<FormButton to=''>Send</FormButton>
+					</Form>
+					<ImgContainer>
+						<Img />
+					</ImgContainer>
+				</Content>
 			</Wrapper>
 		</Container>
 	);
