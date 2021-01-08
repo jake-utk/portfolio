@@ -94,7 +94,10 @@ const Contact = () => {
 
 	return (
 		<Container id='contact'>
-			<Wrapper>
+			<Wrapper
+				data-aos='zoom-in'
+				data-aos-duration='1000'
+				data-aos-anchor-placement='center bottom'>
 				<Content>
 					<Form>
 						<H1>Contact Me</H1>
