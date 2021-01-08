@@ -129,10 +129,16 @@ const Img = styled.div`
 	background: url(${Image});
 	background-position: 65% 0;
 	background-size: cover;
-	height: 300px;
+	height: 500px;
 	margin: 0 0 10px 0;
 	padding-right: 0;
 	width: 300px;
+	@media screen and (max-width: 480px) {
+		height: 400px;
+		width: 250px;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
 `;
 
 const About = () => {

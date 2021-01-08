@@ -42,17 +42,17 @@ const Wrapper = styled.div`
 	max-width: 1000px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(6, 1fr);
 	align-items: center;
+	justify-content: center;
 	grid-gap: 16px;
-	/* padding: 0 50px; // not sure */
 
 	@media screen and (max-width: 1200px) {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	@media screen and (max-width: 780px) {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 		padding: 0 20px;
 	}
 `;

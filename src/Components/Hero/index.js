@@ -96,7 +96,7 @@ const ArrowScroll = styled(Link)`
 	text-decoration: none;
 	cursor: pointer;
 	position: absolute;
-	bottom: 10%;
+	bottom: 25%;
 	z-index: 10;
 `;
 
@@ -151,10 +151,10 @@ const Hero = () => {
 					<Typist.Backspace count={13} delay={300} />
 					<P>Remote</P>
 				</Typist>
-				<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
-					<Arrow visibility={arrowVisibility} />
-				</ArrowScroll>
 			</Content>
+			<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
+				<Arrow visibility={arrowVisibility} />
+			</ArrowScroll>
 		</Container>
 	);
 };
