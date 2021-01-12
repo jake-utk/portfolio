@@ -27,10 +27,9 @@ const Wrapper = styled.div`
 const Row = styled.div`
 	align-items: center;
 	display: grid;
-	grid-auto-columns: minmax(auto, 1fr);
+	grid-auto-columns: minmax(2, 1fr);
 	grid-template-areas: "col2 col1";
 	overflow: hidden;
-	/* width: 100%; */
 
 	@media screen and (max-width: 780px) {
 		grid-template-areas: "col1" "col2";
