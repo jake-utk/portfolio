@@ -96,7 +96,7 @@ const ArrowScroll = styled(Link)`
 	text-decoration: none;
 	cursor: pointer;
 	position: absolute;
-	bottom: 25%;
+	bottom: 15%;
 	z-index: 10;
 `;
 
@@ -110,7 +110,7 @@ const Arrow = styled(ImArrowDown)`
 	-moz-animation: bounce 1.25s infinite;
 	-webkit-animation: bounce 1.25s infinite;
 	animation: bounce 1.25s infinite;
-	transition: opacity 200ms;
+	transition: opacity 200ms, color 2s, height 2s, width 2s;
 
 	@keyframes bounce {
 		0%,
@@ -126,6 +126,12 @@ const Arrow = styled(ImArrowDown)`
 		60% {
 			transform: translateY(-15px);
 		}
+	}
+
+	&:hover {
+		color: #f58549;
+		height: 60px;
+		width: 60px;
 	}
 `;
 
