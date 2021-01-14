@@ -148,7 +148,7 @@ const Hero = () => {
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
-				<Typist avgTypingDelay={80} startDelay={500} onTypingDone={showArrow}>
+				<Typist avgTypingDelay={60} startDelay={500} onTypingDone={showArrow}>
 					<H1>JAKE ADDIS</H1>
 					<Typist.Delay ms={300} />
 					<P>Software Engineer</P>
