@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
@@ -18,54 +18,6 @@ const Wrapper = styled.div`
 	align-items: center;
 	max-width: 1100px;
 	margin: 0 auto;
-`;
-
-const LinksContainer = styled.div`
-	display: flex;
-	justify-content: center;
-
-	@media screen and (max-width: 820px) {
-		padding-top: 32px;
-	}
-`;
-
-const LinksWrapper = styled.div`
-	display: flex;
-	margin-bottom: 50px;
-
-	@media screen and (max-width: 820px) {
-		flex-direction: column;
-	}
-`;
-
-const LinkItems = styled.div`
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	text-align: left;
-	box-sizing: border-box;
-
-	@media screen and (max-width: 420px) {
-		margin: 0;
-		width: 100%;
-		align-items: center;
-		flex-direction: column;
-	}
-`;
-
-const FooterLink = styled(Link)`
-	color: #e1e2e2; // ruby red
-	text-decoration: none;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom: 1rem;
-	max-width: 100%;
-	font-size: 14px;
-
-	&:hover {
-		color: #9b1d20; // ruby red
-		transition: 0.3s ease-out;
-	}
 `;
 
 const SocialMedia = styled.section`
@@ -109,6 +61,15 @@ const Copyright = styled.small`
 	margin-bottom: 16px;
 	display: flex;
 	justify-content: space-between;
+	padding-left: 10vw;
+
+	@media screen and (max-width: 820px) {
+		padding-left: 0;
+	}
+
+	@media screen and (max-width: 1000px) {
+		/* padding-left: 15vw; */
+	}
 `;
 
 const SocialIcons = styled.div`
@@ -130,18 +91,6 @@ const SocialIconLink = styled.a`
 `;
 
 const Footer = () => {
-	const [windowSize, setWindowSize] = useState();
-
-	const breakpoint = 780;
-
-	useEffect(() => {
-		setWindowSize(window.innerWidth);
-	}, []);
-
-	window.addEventListener("resize", () => {
-		setWindowSize(window.innerWidth);
-	});
-
 	const scrollHome = () => {
 		Scroll.scrollToTop();
 	};
@@ -149,19 +98,6 @@ const Footer = () => {
 	return (
 		<Container>
 			<Wrapper>
-				{windowSize > breakpoint ? (
-					<LinksContainer>
-						<LinksWrapper>
-							<LinkItems>
-								<FooterLink to='/'>Link</FooterLink>
-								<FooterLink to='/'>Link</FooterLink>
-								<FooterLink to='/'>Link</FooterLink>
-								<FooterLink to='/'>Link</FooterLink>
-								<FooterLink to='/'>Link</FooterLink>
-							</LinkItems>
-						</LinksWrapper>
-					</LinksContainer>
-				) : null}
 				<SocialMedia>
 					<SocialWrapper>
 						<Logo to='/' onClick={scrollHome}>
