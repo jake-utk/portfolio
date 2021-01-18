@@ -96,7 +96,7 @@ const ArrowScroll = styled(Link)`
 	text-decoration: none;
 	cursor: pointer;
 	position: absolute;
-	bottom: 25%;
+	bottom: 15%;
 	z-index: 10;
 `;
 
@@ -110,7 +110,7 @@ const Arrow = styled(ImArrowDown)`
 	-moz-animation: bounce 1.25s infinite;
 	-webkit-animation: bounce 1.25s infinite;
 	animation: bounce 1.25s infinite;
-	transition: opacity 200ms;
+	transition: opacity 200ms, color 2s, height 2s, width 2s;
 
 	@keyframes bounce {
 		0%,
@@ -127,6 +127,12 @@ const Arrow = styled(ImArrowDown)`
 			transform: translateY(-15px);
 		}
 	}
+
+	&:hover {
+		color: #f58549;
+		height: 60px;
+		width: 60px;
+	}
 `;
 
 const Hero = () => {
@@ -142,7 +148,7 @@ const Hero = () => {
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
-				<Typist avgTypingDelay={80} startDelay={500} onTypingDone={showArrow}>
+				<Typist avgTypingDelay={60} startDelay={500} onTypingDone={showArrow}>
 					<H1>JAKE ADDIS</H1>
 					<Typist.Delay ms={300} />
 					<P>Software Engineer</P>

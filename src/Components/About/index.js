@@ -27,11 +27,16 @@ const Wrapper = styled.div`
 const Row = styled.div`
 	align-items: center;
 	display: grid;
-	grid-auto-columns: minmax(auto, 1fr);
+	grid-auto-columns: minmax(2, 1fr);
 	grid-template-areas: "col2 col1";
+	overflow: hidden;
 
 	@media screen and (max-width: 780px) {
 		grid-template-areas: "col1" "col2";
+	}
+
+	@media screen and (max-width: 380px) {
+		grid-template-columns: 1fr;
 	}
 `;
 
@@ -159,19 +164,19 @@ const About = () => {
 					<ColumnTwo>
 						<Content>
 							<Intro
-								data-aos='fade-right'
+								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
 								Learn more...
 							</Intro>
 							<H1
-								data-aos='fade-right'
+								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
 								About me
 							</H1>
 							<Description
-								data-aos='fade-right'
+								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
 								I’m a software developer who designs object-oriented,
@@ -187,7 +192,7 @@ const About = () => {
 									href={Resume}
 									target='_blank'
 									rel='noreferrer'
-									data-aos='fade-right'
+									data-aos='zoom-in'
 									data-aos-duration='1000'
 									data-aos-anchor-placement='center-bottom'>
 									Resume

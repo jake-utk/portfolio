@@ -14,17 +14,21 @@ import styled, { css } from "styled-components/macro";
 
 const Container = styled.div`
 	background-color: #e1e2e2; // platinum
-	height: 800px;
+	min-height: 600px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	padding-bottom: 10vh;
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-width: 1200px) {
+		padding-top: -10vh;
+		min-height: 600px;
 	}
-	@media screen and (max-width: 780px) {
-	}
-	@media screen and (max-width: 480px) {
+
+	@media screen and (max-width: 380px) {
+		padding-top: 2.5vh;
 	}
 `;
 
@@ -53,7 +57,12 @@ const Wrapper = styled.div`
 
 	@media screen and (max-width: 780px) {
 		grid-template-columns: repeat(3, 1fr);
-		padding: 0 20px;
+		/* padding: 0 20px; */
+	}
+
+	@media screen and (max-width: 380px) {
+		grid-template-columns: repeat(2, 1fr);
+		/* padding-bottom: 40px; */
 	}
 `;
 

@@ -6,11 +6,13 @@ import Footer from "../Components/Footer";
 import Projects from "../Components/Projects";
 import { projects } from "../data/data";
 import Skills from "../Components/Skills";
+import Info from "../Components/About/Info";
 
 const Home = () => {
 	return (
 		<>
 			<Hero />
+			<Info />
 			<About />
 			<Contact />
 			<Projects projects={projects} />

@@ -40,7 +40,7 @@ const LogoRouter = styled(LinkRouter)`
 	color: ${(p) => (p.scrollvalue ? "#E1E2E2" : "transparent")}; // platinum
 	justify-self: flex-start;
 	cursor: pointer;
-	font-size: 60px;
+	font-size: 42px;
 	display: flex;
 	align-items: center;
 	margin-left: 24px;

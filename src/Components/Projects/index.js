@@ -9,6 +9,7 @@ const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 
 	@media screen and (max-width: 1000px) {
 		height: 1200px;
