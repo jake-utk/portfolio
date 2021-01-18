@@ -40,6 +40,8 @@ const Menu = styled.ul`
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(5, 80px); // number of menu items
 	text-align: center;
+	margin: 0;
+	padding: 0;
 
 	@media screen and (max-width: 480px) {
 		grid-template-rows: repeat(5, 60px); // number of menu items
