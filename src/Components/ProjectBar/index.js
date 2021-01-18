@@ -30,7 +30,8 @@ const CloseIcon = styled(FaRegTimesCircle)`
 	color: #e1e2e2; // platinum
 `;
 
-const ProjectBar = ({ isOpen, toggle }) => {
+const ProjectBar = ({ isOpen, toggle, project }) => {
+	console.log("project object from projectbar.js", project);
 	return (
 		<Container isOpen={isOpen} onClick={toggle}>
 			<Icon onClick={toggle}>

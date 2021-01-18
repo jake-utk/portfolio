@@ -11,6 +11,7 @@ import ProjectBar from "../Components/ProjectBar";
 
 const Home = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [project, setProject] = useState({});
 
 	const toggle = () => setIsOpen(!isOpen);
 
@@ -20,8 +21,8 @@ const Home = () => {
 			{/* <Info /> */}
 			<About />
 			<Contact />
-			<ProjectBar isOpen={isOpen} toggle={toggle} />
-			<Projects projects={projects} toggle={toggle} />
+			<ProjectBar isOpen={isOpen} toggle={toggle} project={project} />
+			<Projects projects={projects} toggle={toggle} setProject={setProject} />
 			<Skills />
 			<Footer />
 		</>

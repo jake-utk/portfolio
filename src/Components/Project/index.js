@@ -40,7 +40,7 @@ const P = styled.p`
 	text-align: center;
 `;
 
-const Project = ({ project, toggle }) => {
+const Project = ({ project, setProject, toggle }) => {
 	const fadeDirection = (id) => {
 		if (id % 2 === 0) {
 			return "fade-zoom-in";
@@ -49,9 +49,14 @@ const Project = ({ project, toggle }) => {
 		}
 	};
 
+	const handleClick = () => {
+		toggle();
+		setProject(project);
+	};
+
 	return (
 		<Card
-			onClick={toggle}
+			onClick={handleClick}
 			data-aos={fadeDirection(project.id)}
 			data-aos-delay='500'
 			data-aos-anchor-placement='center bottom'>
