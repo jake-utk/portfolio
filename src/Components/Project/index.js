@@ -40,8 +40,8 @@ const P = styled.p`
 	text-align: center;
 `;
 
-const Project = ({ project }) => {
-	let fadeDirection = (id) => {
+const Project = ({ project, toggle }) => {
+	const fadeDirection = (id) => {
 		if (id % 2 === 0) {
 			return "fade-zoom-in";
 		} else {
@@ -51,6 +51,7 @@ const Project = ({ project }) => {
 
 	return (
 		<Card
+			onClick={toggle}
 			data-aos={fadeDirection(project.id)}
 			data-aos-delay='500'
 			data-aos-anchor-placement='center bottom'>

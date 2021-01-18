@@ -53,7 +53,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, toggle }) => {
 	return (
 		<Container id='projects'>
 			<H1
@@ -66,7 +66,7 @@ const Projects = ({ projects }) => {
 			</H1>
 			<Wrapper>
 				{projects.reverse().map((project, index) => {
-					return <Project project={project} key={index} />;
+					return <Project toggle={toggle} project={project} key={index} />;
 				})}
 			</Wrapper>
 		</Container>
