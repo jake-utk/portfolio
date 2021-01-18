@@ -124,6 +124,7 @@ const Contact = () => {
 							form='nameform'
 							onChange={(event) => setName(event.target.value)}
 							value={name}
+							defaultValue='You'
 						/>
 						<Label htmlFor='email'>Email:</Label>
 						<InputTextArea
@@ -134,6 +135,7 @@ const Contact = () => {
 							form='emailform'
 							onChange={(event) => setEmail(event.target.value)}
 							value={email}
+							defaultValue='hiring@company.com'
 						/>
 						<Label htmlFor='message'>Message:</Label>
 						<InputTextArea
@@ -144,6 +146,7 @@ const Contact = () => {
 							form='detailsform'
 							onChange={(event) => setContact(event.target.value)}
 							value={contact}
+							defaultValue='We want to hire you!  When can you start?'
 						/>
 						<FormButton to=''>Send</FormButton>
 					</Form>
