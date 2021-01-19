@@ -53,7 +53,7 @@ const Content = styled.div`
 	padding: 0;
 
 	@media screen and (max-width: 480px) {
-		/* grid-template-rows: repeat(7, 60px); */
+		gap: 4vw;
 	}
 
 	@media screen and (max-width: 1000px) {

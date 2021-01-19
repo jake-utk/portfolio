@@ -4,8 +4,10 @@ import Image from "../../images/DSC01950.jpeg";
 import Resume from "../../docs/Resume.pdf";
 
 const Container = styled.div`
-	background: #1d2228; // eerie black
-	color: #e1e2e2; // platinum
+	background: ${({ darkBackground }) =>
+		darkBackground ? "#1d2228" : "#e1e2e2"}; // eerie black or platinum
+	color: ${({ darkBackground }) =>
+		darkBackground ? "#e1e2e2" : "#1d2228"}; // platinum
 
 	@media screen and (max-width: 780px) {
 		padding: 100px 0;
@@ -27,17 +29,19 @@ const Wrapper = styled.div`
 const Row = styled.div`
 	align-items: center;
 	display: grid;
-	grid-auto-columns: minmax(2, 1fr);
-	grid-template-areas: "col2 col1";
+	grid-auto-columns: minmax(auto, 1fr);
+	grid-template-areas: ${({ imageStart }) =>
+		imageStart ? `'col2 col1'` : `'col1 col2'`};
 	overflow: hidden;
 
 	@media screen and (max-width: 780px) {
-		grid-template-areas: "col1" "col2";
+		grid-template-areas: ${({ imageStart }) =>
+			imageStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
 	}
 
-	@media screen and (max-width: 380px) {
+	/* @media screen and (max-width: 380px) {
 		grid-template-columns: 1fr;
-	}
+	} */
 `;
 
 const ColumnOne = styled.div`
@@ -59,7 +63,7 @@ const Content = styled.div`
 `;
 
 const Intro = styled.p`
-	color: #e1e2e2; // platinum
+	color: ${({ lightIntroText }) => (lightIntroText ? "#E1e2e2" : "#1d2228")};
 	font-size: 16px;
 	font-weight: 500;
 	letter-spacing: 1.4px;
@@ -69,7 +73,8 @@ const Intro = styled.p`
 `;
 
 const Description = styled.p`
-	color: #e1e2e2; // platinum
+	color: ${({ lightDescriptionText }) =>
+		lightDescriptionText ? "#e1e2e2" : "#1d2228"};
 	font-size: 18px;
 	line-height: 24px;
 	margin-bottom: 35px;
@@ -81,7 +86,7 @@ const Description = styled.p`
 `;
 
 const H1 = styled.h1`
-	color: #e1e2e2;
+	color: ${({ lightH1Text }) => (lightH1Text ? "#e1e2e2" : "#1d2228")};
 	font-size: 48px;
 	font-weight: 700;
 	line-height: 1.1;
@@ -96,17 +101,17 @@ const ButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
 
-	@media screen and (max-width: 480px) {
+	/* @media screen and (max-width: 480px) {
 		justify-content: center;
-	}
+	} */
 `;
 
 const Button = styled.a`
 	border-radius: 0px;
-	background: #e1e2e2; //platinum
+	background: ${({ lightButton }) => (lightButton ? "#e1e2e2" : "#1d2228")};
 	white-space: nowrap;
 	padding: 16px 50px;
-	color: #1d2228; // eerie black
+	color: ${({ darkText }) => (darkText ? "#1D2228" : "#e1e2e2")};
 	font-size: 28px;
 	outline: 5px solid #646c79; // black coral
 	border: none;
@@ -130,75 +135,91 @@ const ImgContainer = styled.div`
 	max-width: 555px;
 `;
 
-const Img = styled.div`
-	background: url(${Image});
+const Img = styled.img`
+	/* background: url(${Image});
 	background-position: 65% 0;
 	background-size: cover;
-	height: 500px;
+	height: 500px; */
+	width: 100%;
 	margin: 0 0 10px 0;
 	padding-right: 0;
-	width: 300px;
+	/* width: 300px;
 	@media screen and (max-width: 480px) {
 		height: 400px;
 		width: 250px;
 		margin-left: 50px;
 		margin-right: 50px;
-	}
+	} */
 `;
 
-const About = () => {
+const Info = ({
+	id,
+	darkBackground,
+	lightIntroText,
+	lightH1Text,
+	lightDescriptionText,
+	introText,
+	h1Text,
+	descText,
+	buttonText,
+	imageStart,
+	image,
+	altText,
+	lightButton,
+	darkText,
+}) => {
 	return (
-		<Container id='about'>
+		<Container darkBackground={darkBackground} id={id}>
 			<Wrapper>
-				<Row>
+				<Row imageStart={imageStart}>
 					<ColumnOne>
-						<ImgContainer>
-							<Img
-								alt='Picture of Jake'
-								data-aos='zoom-in'
-								data-aos-duration='1000'
-								data-aos-anchor-placement='center bottom'
-							/>
-						</ImgContainer>
-					</ColumnOne>
-					<ColumnTwo>
 						<Content>
 							<Intro
+								lightIntroText={lightIntroText}
 								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
-								Learn more...
+								{introText}
 							</Intro>
 							<H1
+								lightH1Text={lightH1Text}
 								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
-								About me
+								{h1Text}
 							</H1>
 							<Description
+								lightDescriptionText={lightDescriptionText}
 								data-aos='zoom-in'
 								data-aos-duration='1000'
 								data-aos-anchor-placement='center-bottom'>
-								I’m a software developer who designs object-oriented,
-								user-centric, and responsive applications that bring a
-								business’s idea to life. I leverage my technical, analytical,
-								and problem-solving skills to write functional application code
-								that is modular and is ready to scale. I’m able to debug my
-								issues independently and have experience with version control in
-								a team environment.
+								{descText}
 							</Description>
 							<ButtonContainer>
 								<Button
+									lightButton={lightButton}
+									darkText={darkText}
 									href={Resume}
 									target='_blank'
 									rel='noreferrer'
 									data-aos='zoom-in'
 									data-aos-duration='1000'
 									data-aos-anchor-placement='center-bottom'>
-									Resume
+									{buttonText}
 								</Button>
 							</ButtonContainer>
 						</Content>
+					</ColumnOne>
+					<ColumnTwo>
+						<ImgContainer>
+							<Img
+								src={image}
+								alt={altText}
+								data-aos='zoom-in'
+								data-aos-duration='1000'
+								data-aos-anchor-placement='center bottom'
+							/>
+						</ImgContainer>
 					</ColumnTwo>
 				</Row>
 			</Wrapper>
@@ -206,4 +227,4 @@ const About = () => {
 	);
 };
 
-export default About;
+export default Info;

@@ -1,3 +1,6 @@
+import ImageOne from "../images/DSC01950.jpeg";
+import ImageTwo from "../images/IMG_4485.JPG";
+
 export const projects = [
 	{
 		id: 1,
@@ -60,3 +63,39 @@ export const projects = [
 		updated: "1/5/2021",
 	},
 ];
+
+export const infoOne = {
+	id: "about",
+	darkBackground: true,
+	lightIntroText: true,
+	lightH1Text: true,
+	lightDescriptionText: true,
+	introText: "thanks for checking out my portfolio.",
+	h1Text: "I'm a software engineer",
+	descText:
+		"...who enjoys using logic to solve provlems with code.  I design object-oriented, use-centric, and responsive applications that bring a business's idea to life.  I'm currently seeking full time employment",
+	buttonText: "Resume",
+	imageStart: true,
+	image: ImageOne,
+	altText: "Picture of Jake",
+	lightButton: true,
+	darkText: true,
+};
+
+export const infoTwo = {
+	id: "personal",
+	darkBackground: false,
+	lightIntroText: false,
+	lightH1Text: false,
+	lightDescriptionText: false,
+	introText: "leisure / R&R",
+	h1Text: "When I'm not at work...",
+	descText:
+		"...I love to play guitar, watch sports, and cook breakfast food.  If I'm not doing one of those, I'm working on a coding challenge.",
+	buttonText: "Resume",
+	imageStart: false,
+	image: ImageTwo,
+	altText: "Guitar",
+	lightButton: false,
+	darkText: false,
+};

@@ -101,7 +101,7 @@ const BurgerLinkScroll = styled(LinkScroll)`
 
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(0);
-	const pages = ["Home", "About", "Contact", "Projects", "Skills"];
+	const pages = ["Home", "About", "Skills", "Projects", "Contact"];
 
 	const changeScroll = () => {
 		if (window.scrollY >= 80) {
