@@ -5,10 +5,10 @@ const Card = styled.div`
 	background: #646c79;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-items: center;
 	border-radius: 10px;
-	height: 340px;
+	height: 300px;
 	padding: 30px;
 	width: 100%;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -24,20 +24,18 @@ const Card = styled.div`
 const Image = styled.img`
 	max-height: 200px;
 	max-width: 225px;
-	margin-bottom: 10px;
 `;
 
 const Title = styled.h2`
 	color: #e1e2e2;
-	font-size: 1rem;
+	font-size: 2rem;
 	margin-bottom: 10px;
 	text-decoration: none;
-`;
-
-const P = styled.p`
-	color: #e1e2e2;
-	font-size: 1rem;
 	text-align: center;
+
+	@media screen and (max-width: 480px) {
+		font-size: 1.5rem;
+	}
 `;
 
 const Project = ({ project, setProject, toggle }) => {

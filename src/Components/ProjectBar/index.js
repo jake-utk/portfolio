@@ -66,18 +66,36 @@ const Box2 = styled.div`
 	${Box}
 	grid-row: 2 / span 2;
 	grid-column: 1;
+	padding: 5px;
+
+	@media screen and (max-width: 780px) {
+		grid-row: 2;
+		grid-column: 1 / span 2;
+	}
 `;
 
 const Box3 = styled.div`
 	${Box}
 	grid-row: 2;
 	grid-column: 2;
+	background: none;
+
+	@media screen and (max-width: 780px) {
+		grid-row: 3;
+		grid-column: 1;
+	}
 `;
 
 const Box4 = styled.div`
 	${Box}
 	grid-row: 3;
 	grid-column: 2;
+	background: none;
+
+	/* @media screen and (max-width: 780px) {
+        grid-row: 3;
+        
+	} */
 `;
 
 const Box5 = styled.div`
@@ -102,6 +120,8 @@ const Image = styled.img`
 `;
 
 const Button = styled.a`
+	height: 100%;
+	width: 100%;
 	border-radius: 0px;
 	background: #e1e2e2; //platinum
 	white-space: nowrap;
@@ -125,7 +145,11 @@ const Button = styled.a`
 	}
 `;
 
-const SkillsContainer = styled.div``;
+const SkillsContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+`;
 
 const SkillCard = styled.div``;
 
@@ -134,7 +158,7 @@ const Description = styled.p``;
 const ProjectBar = ({ isOpen, toggle, project }) => {
 	console.log("project object from projectbar.js", project);
 	return (
-		<Container isOpen={isOpen} onClick={toggle}>
+		<Container isOpen={isOpen}>
 			<Icon onClick={toggle}>
 				<CloseIcon />
 			</Icon>
