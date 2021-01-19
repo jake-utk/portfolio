@@ -62,8 +62,6 @@ const Project = ({ project, setProject, toggle }) => {
 			data-aos-anchor-placement='center bottom'>
 			<Image src={project.image} />
 			<Title>{project.name}</Title>
-			<P>{project.description}</P>
-			<P></P>
 		</Card>
 	);
 };
