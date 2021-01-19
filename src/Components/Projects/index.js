@@ -4,30 +4,34 @@ import Project from "../Project";
 
 const Container = styled.div`
 	background-color: #1d2228;
-	height: 900px;
+	height: 800px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	padding-bottom: 50px;
 
 	@media screen and (max-width: 1000px) {
 		height: 1200px;
 	}
 
 	@media screen and (max-width: 780px) {
-		height: 2000px;
+		height: 1700px;
 	}
 
 	@media screen and (max-width: 480px) {
-		height: 2000px;
+		height: 1700px;
 	}
 `;
 
 const H1 = styled.h1`
 	font-size: 2.5rem;
 	color: #e1e2e2;
-	margin-bottom: 64px;
+
+	@media screen and (max-width: 780px) {
+		margin-bottom: -10px;
+	}
 
 	@media screen and (max-width: 480px) {
 		font-size: 2rem;
@@ -45,15 +49,17 @@ const Wrapper = styled.div`
 
 	@media screen and (max-width: 1000px) {
 		grid-template-columns: 1fr 1fr;
+		padding-bottom: 100px;
+		padding-top: 20px;
 	}
 
 	@media screen and (max-width: 780px) {
 		grid-template-columns: 1fr;
-		padding: 0 20px;
+		padding: 30px 20px;
 	}
 `;
 
-const Projects = ({ projects }) => {
+const Projects = ({ projects, toggle, setProject }) => {
 	return (
 		<Container id='projects'>
 			<H1
@@ -65,9 +71,18 @@ const Projects = ({ projects }) => {
 				Projects
 			</H1>
 			<Wrapper>
-				{projects.reverse().map((project, index) => {
-					return <Project project={project} key={index} />;
-				})}
+				{projects
+					.sort((a, b) => b.id - a.id)
+					.map((project, index) => {
+						return (
+							<Project
+								toggle={toggle}
+								project={project}
+								setProject={setProject}
+								key={index}
+							/>
+						);
+					})}
 			</Wrapper>
 		</Container>
 	);
