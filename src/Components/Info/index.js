@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "../../images/DSC01950.jpeg";
 import Resume from "../../docs/Resume.pdf";
 
 const Container = styled.div`
