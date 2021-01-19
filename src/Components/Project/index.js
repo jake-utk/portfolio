@@ -32,6 +32,7 @@ const Title = styled.h2`
 	margin-bottom: 10px;
 	text-decoration: none;
 	text-align: center;
+	letter-spacing: 3px;
 
 	@media screen and (max-width: 480px) {
 		font-size: 1.5rem;
