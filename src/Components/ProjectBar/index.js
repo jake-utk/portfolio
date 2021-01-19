@@ -51,9 +51,10 @@ const Content = styled.div`
 
 const Box = css`
 	height: 100%;
-	width: 100%;
-	background-color: #646c79;
+	width: 95%;
+	background: #646c79;
 	border-radius: 2.5%;
+	padding: 0 50px;
 `;
 
 const Box1 = styled.div`
@@ -67,6 +68,7 @@ const Box2 = styled.div`
 	grid-row: 2 / span 2;
 	grid-column: 1;
 	padding: 5px;
+	background: none;
 
 	@media screen and (max-width: 780px) {
 		grid-row: 2;
@@ -91,11 +93,6 @@ const Box4 = styled.div`
 	grid-row: 3;
 	grid-column: 2;
 	background: none;
-
-	/* @media screen and (max-width: 780px) {
-        grid-row: 3;
-        
-	} */
 `;
 
 const Box5 = styled.div`
@@ -110,13 +107,15 @@ const Box6 = styled.div`
 	grid-column: 1 / span 2;
 `;
 
-const Name = styled.h1``;
+const Name = styled.h1`
+	font-size: 2rem;
+`;
 
 const Image = styled.img`
-	/* max-height: 200px; */
-	/* max-width: 225px; */
 	height: 100%;
 	width: 100%;
+	border: 5px solid #646c79;
+	border-radius: 5%;
 `;
 
 const Button = styled.a`
@@ -156,7 +155,6 @@ const SkillCard = styled.div``;
 const Description = styled.p``;
 
 const ProjectBar = ({ isOpen, toggle, project }) => {
-	console.log("project object from projectbar.js", project);
 	return (
 		<Container isOpen={isOpen}>
 			<Icon onClick={toggle}>

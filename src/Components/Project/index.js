@@ -39,14 +39,8 @@ const Title = styled.h2`
 `;
 
 const Project = ({ project, setProject, toggle }) => {
-	const fadeDirection = (id) => {
-		if (id % 2 === 0) {
-			return "fade-zoom-in";
-		} else {
-			return "fade-zoom-in";
-		}
-	};
-
+	const fadeDirection = (id) =>
+		id & (2 === 0) ? "fade-zoom-in" : "fade-zoom-out";
 	const handleClick = () => {
 		toggle();
 		setProject(project);

@@ -71,16 +71,18 @@ const Projects = ({ projects, toggle, setProject }) => {
 				Projects
 			</H1>
 			<Wrapper>
-				{projects.reverse().map((project, index) => {
-					return (
-						<Project
-							toggle={toggle}
-							project={project}
-							setProject={setProject}
-							key={index}
-						/>
-					);
-				})}
+				{projects
+					.sort((a, b) => b.id - a.id)
+					.map((project, index) => {
+						return (
+							<Project
+								toggle={toggle}
+								project={project}
+								setProject={setProject}
+								key={index}
+							/>
+						);
+					})}
 			</Wrapper>
 		</Container>
 	);
