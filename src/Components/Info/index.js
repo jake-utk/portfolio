@@ -38,10 +38,6 @@ const Row = styled.div`
 		grid-template-areas: ${({ imageStart }) =>
 			imageStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
 	}
-
-	/* @media screen and (max-width: 380px) {
-		grid-template-columns: 1fr;
-	} */
 `;
 
 const ColumnOne = styled.div`
@@ -100,10 +96,6 @@ const H1 = styled.h1`
 const ButtonContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
-
-	/* @media screen and (max-width: 480px) {
-		justify-content: center;
-	} */
 `;
 
 const Button = styled.a`
@@ -136,20 +128,12 @@ const ImgContainer = styled.div`
 `;
 
 const Img = styled.img`
-	/* background: url(${Image});
-	background-position: 65% 0;
 	background-size: cover;
-	height: 500px; */
+	max-height: ${({ portraitOrient }) => (portraitOrient ? "500px" : "350px")};
+	max-width: ${({ portraitOrient }) => (portraitOrient ? "350px" : "500px")};
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding-right: 0;
-	/* width: 300px;
-	@media screen and (max-width: 480px) {
-		height: 400px;
-		width: 250px;
-		margin-left: 50px;
-		margin-right: 50px;
-	} */
 `;
 
 const Info = ({
@@ -167,6 +151,7 @@ const Info = ({
 	altText,
 	lightButton,
 	darkText,
+	portraitOrient,
 }) => {
 	return (
 		<Container darkBackground={darkBackground} id={id}>
@@ -213,6 +198,7 @@ const Info = ({
 					<ColumnTwo>
 						<ImgContainer>
 							<Img
+								portraitOrient={portraitOrient}
 								src={image}
 								alt={altText}
 								data-aos='zoom-in'

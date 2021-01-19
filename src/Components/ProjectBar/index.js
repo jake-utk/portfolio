@@ -228,7 +228,7 @@ const Button = styled.a`
 	}
 
 	@media screen and (max-width: 780px) {
-		font-size: 24px;
+		font-size: 22px;
 	}
 
 	&:hover {
