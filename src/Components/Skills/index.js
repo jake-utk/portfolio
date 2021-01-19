@@ -51,7 +51,7 @@ const Wrapper = styled.div`
 	justify-content: center;
 	grid-gap: 16px;
 
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1300px) {
 		grid-template-columns: repeat(4, 1fr);
 	}
 

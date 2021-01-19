@@ -53,7 +53,7 @@ const Content = styled.div`
 	padding: 0;
 
 	@media screen and (max-width: 480px) {
-		/* grid-template-rows: repeat(7, 60px); */
+		gap: 4vw;
 	}
 
 	@media screen and (max-width: 1000px) {
@@ -228,7 +228,7 @@ const Button = styled.a`
 	}
 
 	@media screen and (max-width: 780px) {
-		font-size: 24px;
+		font-size: 22px;
 	}
 
 	&:hover {
