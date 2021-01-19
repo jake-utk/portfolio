@@ -1,54 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import Home from "./Components/Home/Home";
-import AboutMe from "./Components/AboutMe/AboutMe";
-import Resume from "./Components/Resume/Resume";
-import Contact from "./Components/Contact/Contact";
-import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
-import Projects from "./Components/Projects/Projects"
-import { Route } from "react-router-dom";
-import { AppContext } from "./AppContext";
-import Hero from "./Components/Hero/Hero";
+// import GlobalStyle from "./globalStyles";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages";
+import Sidebar from "./Components/Sidebar";
+import Navigation from "./Components/Navigation";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
-	const [menuOpenState, setMenuOpenState] = useState(false);
-	const [image, setImage] = useState();
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
+
+	useEffect(() => {
+		Aos.init({});
+	}, []);
 
 	return (
-		<div className='App'>
-			<div id='outer-container'>
-				<AppContext.Provider value={{ menuOpenState, setMenuOpenState }}>
-					<BurgerMenu
-						pageWrapId={"page-wrap"}
-						outerContainerId={"outer-container"}
-					/>
-					<Hero />
-						<div className='main'>
-							{/* <Route path='/' image={image} component={Home} /> */}
-							<Route path='/aboutme' component={AboutMe} />
-							<Route path='/projects' componeont={Projects} />
-							<Route path='/resume' component={Resume} />
-							<Route path='/contact' component={Contact} />
-						</div>
-						<Home image={image} />
-						<AboutMe />
-						<Projects setImage={setImage} />
-						<Resume />
-						<Contact />
-				</AppContext.Provider>
-			</div>
-			<footer>
-				Developed by{" "}
-				<a href='https://github.com/jake-utk' target='_blank' rel='noreferrer'>
-					Jake Addis
-				</a>{" "}
-				(©2020) using{" "}
-				<a href='https://reactjs.org/' target='_blank' rel='noreferrer'>
-					React
-				</a>
-				. Please hire me!
-			</footer>
-		</div>
+		<>
+			{/* <GlobalStyle /> */}
+			<Navigation toggle={toggle} />
+			<Sidebar isOpen={isOpen} toggle={toggle} />
+			<Switch>
+				<Route path='/' component={Home} exact />
+			</Switch>
+		</>
 	);
 }
 

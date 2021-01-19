@@ -1,61 +1,9 @@
-/* COLORS
-    grey: #31393C
-    lightGrey: #93827F
-    white: #F7F5FB
-    orangeYellow: #F6AE2D
-    blueGrey: #5C9EAD
-*/
-
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap");
-
-a {
-	text-decoration: none;
-	color: #5c9ead;
+* {
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
 }
 
 body,
 html {
-	height: 100%;
-	scroll-behavior: smooth;
-}
-
-footer {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
-}
-
-.App {
-	height: 100%;
-	color: #f7f5fb;
-	font-family: "Libre Franklin", sans-serif;
-	font-size: 18px;
-}
-
-/* FLEX ELEMENT TO CENTER */
-.center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-}
-
-/* REVISIT THIS */
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	background-color: transparent;
-	margin: 10px;
-	padding: 10px;
-	max-width: 100%;
-}
-
-.lazy-loader {
-	font-size: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	font-family: "Big Shoulders Stencil Display", cursive;
+	margin: 0;
 }
