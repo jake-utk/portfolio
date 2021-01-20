@@ -24,6 +24,11 @@ const Card = styled.div`
 const Image = styled.img`
 	max-height: 200px;
 	max-width: 225px;
+
+	@media screen and (max-width: 290px) {
+		max-height: 150px;
+		max-width: 175px;
+	}
 `;
 
 const Title = styled.h2`
