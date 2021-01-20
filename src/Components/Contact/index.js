@@ -5,7 +5,7 @@ import Image from "../../images/undraw1.svg";
 
 const Container = styled.div`
 	background: #e1e2e2; // platinum
-	min-height: 700px;
+	min-height: 500px;
 	overflow: hidden;
 	z-index: 0;
 	padding-top: 5vh;
@@ -76,6 +76,11 @@ const InputTextArea = styled.textarea`
 	resize: none;
 `;
 
+const InputTextInput = styled.input`
+	width: 100%;
+	resize: none;
+`;
+
 const ImgContainer = styled.div`
 	height: 100%;
 	max-width: 555px;
@@ -112,12 +117,17 @@ const Contact = () => {
 			<Wrapper>
 				<Content>
 					<Form
+						name='contact'
+						action='/'
+						method='POST'
 						data-aos='zoom-in'
 						data-aos-duration='1000'
 						data-aos-anchor-placement='center bottom'>
+						<input required type='hidden' name='form-name' value='contact' />
 						<H1>Contact Me</H1>
 						<Label htmlFor='name'>Name:</Label>
-						<InputTextArea
+						<InputTextInput
+							name='name'
 							type='text'
 							rows='3'
 							id='name'
@@ -127,8 +137,8 @@ const Contact = () => {
 							defaultValue='You'
 						/>
 						<Label htmlFor='email'>Email:</Label>
-						<InputTextArea
-							type='text'
+						<InputTextInput
+							type='email'
 							rows='3'
 							name='email'
 							id='email'
@@ -148,7 +158,9 @@ const Contact = () => {
 							value={contact}
 							defaultValue='We want to hire you!  When can you start?'
 						/>
-						<FormButton to=''>Send</FormButton>
+						<FormButton type='submit' to=''>
+							Send
+						</FormButton>
 					</Form>
 					<ImgContainer>
 						<Img src={Image} />
