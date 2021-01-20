@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Button } from "../../Components/Styles";
 import Image from "../../images/undraw1.svg";
 
 const Container = styled.div`
@@ -66,9 +65,29 @@ const Label = styled.label`
 	margin-bottom: 8px;
 `;
 
-const FormButton = styled(Button)`
+const FormButton = styled.button`
 	margin-top: 10px;
-	outline: 0px;
+	border-radius: 0px;
+	background: #e1e2e2; // platinum / conditional
+	white-space: nowrap;
+	padding: 16px 50px; // conditional
+	color: #1d2228; // eerie black /  conditional
+	font-size: 28px; // conditional
+	outline: 5px solid #646c79; // black coral / conditional
+	border: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+
+	&:hover {
+		transition: all 0.2s ease-in-out;
+		background: #646c79; // black coral / conditional
+		color: #e1e2e2; // platinum / conditional
+		outline: 5px solid #e1e2e2; // platinum / conditional
+	}
 `;
 
 const InputTextArea = styled.textarea`
