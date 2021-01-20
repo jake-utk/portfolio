@@ -158,9 +158,7 @@ const Contact = () => {
 							value={contact}
 							defaultValue='We want to hire you!  When can you start?'
 						/>
-						<FormButton type='submit' to=''>
-							Send
-						</FormButton>
+						<FormButton type='submit'>Send</FormButton>
 					</Form>
 					<ImgContainer>
 						<Img src={Image} />
