@@ -10,7 +10,7 @@ export const projects = [
 		image: require("../images/simon.png").default,
 		url: "https://jake-utk.github.io/simon-guitar-project/",
 		repo: "https://github.com/jake-utk/simon-guitar-project",
-		language: ["JavaScript", "HTML", "CSS"],
+		skills: ["JavaScript", "HTML", "CSS"],
 		created: "10/8/2020",
 		updated: "11/27/2020",
 	},
@@ -22,7 +22,7 @@ export const projects = [
 		image: require("../images/query-tech.png").default,
 		url: "http://querytech.herokuapp.com/",
 		repo: "https://github.com/jake-utk/query-tech",
-		language: ["JavaScript", "React", "CSS", "HTML"],
+		skills: ["JavaScript", "React", "CSS", "HTML"],
 		created: "10/27/2020",
 		updated: "11/27/2020",
 	},
@@ -33,7 +33,7 @@ export const projects = [
 		image: require("../images/curatr.png").default,
 		url: "https://curatrp3ga.herokuapp.com/",
 		repo: "https://github.com/Davinki-Coders/Project-3-fe",
-		language: ["JavaScript", "React", "Node", "MongoDB", "Express"],
+		skills: ["JavaScript", "React", "Node", "MongoDB", "Express"],
 		created: "11/16/2020",
 		updated: "11/29/2020",
 	},
@@ -45,7 +45,7 @@ export const projects = [
 		image: require("../images/921steak.png").default,
 		url: "http://www.921steak.com",
 		repo: "https://github.com/REST-a-site/project-4-fe",
-		language: ["JavaScript", "React", "Django", "Python", "PostgresQL"],
+		skills: ["JavaScript", "React", "Django", "Python", "PostgresQL"],
 		created: "12/09/2020",
 		updated: "12/18/2020",
 	},
@@ -56,7 +56,7 @@ export const projects = [
 		image: require("../images/portfolio.png").default,
 		url: "https://www.jakeaddis.com/",
 		repo: "https://github.com/jake-utk/portfolio-resume",
-		language: ["JavaScript", "React", "CSS", "HTML"],
+		skills: ["JavaScript", "React", "CSS", "HTML"],
 		created: "11/25/2020",
 		updated: "1/5/2021",
 	},
@@ -79,6 +79,7 @@ export const infoOne = {
 	altText: "Picture of Jake",
 	lightButton: false,
 	darkText: false,
+	buttonHide: false,
 };
 
 export const infoTwo = {
@@ -98,4 +99,5 @@ export const infoTwo = {
 	altText: "Guitar",
 	lightButton: true,
 	darkText: true,
+	buttonHide: true,
 };

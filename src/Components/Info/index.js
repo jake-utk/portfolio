@@ -93,7 +93,7 @@ const H1 = styled.h1`
 `;
 
 const ButtonContainer = styled.div`
-	display: flex;
+	display: ${({ buttonHide }) => (buttonHide ? "none" : "flex")};
 	justify-content: flex-start;
 `;
 
@@ -107,7 +107,7 @@ const Button = styled.a`
 	outline: 5px solid #646c79; // black coral
 	border: none;
 	cursor: pointer;
-	display: flex;
+	display: ${({ buttonHide }) => (buttonHide ? "none" : "flex")};
 	justify-content: center;
 	align-items: center;
 	transition: all 0.2s ease-in-out;
@@ -135,6 +135,12 @@ const Img = styled.img`
 	padding-right: 0;
 `;
 
+const AltContainer = styled.a`
+	text-decoration: none;
+`;
+
+const AltImg = styled.img``;
+
 const Info = ({
 	id,
 	darkBackground,
@@ -151,6 +157,7 @@ const Info = ({
 	lightButton,
 	darkText,
 	portraitOrient,
+	buttonHide,
 }) => {
 	return (
 		<Container darkBackground={darkBackground} id={id}>
@@ -179,19 +186,31 @@ const Info = ({
 								data-aos-anchor-placement='center-bottom'>
 								{descText}
 							</Description>
-							<ButtonContainer>
-								<Button
-									lightButton={lightButton}
-									darkText={darkText}
-									href={Resume}
+							{buttonHide ? (
+								<AltContainer
 									target='_blank'
-									rel='noreferrer'
-									data-aos='zoom-in'
-									data-aos-duration='1000'
-									data-aos-anchor-placement='center-bottom'>
-									{buttonText}
-								</Button>
-							</ButtonContainer>
+									href='https://www.codewars.com/users/jake-utk'>
+									<AltImg
+										src='https://www.codewars.com/users/jake-utk/badges/large'
+										alt='codewars badge large'
+									/>
+								</AltContainer>
+							) : (
+								<ButtonContainer>
+									<Button
+										buttonHide={buttonHide}
+										lightButton={lightButton}
+										darkText={darkText}
+										href={Resume}
+										target='_blank'
+										rel='noreferrer'
+										data-aos='zoom-in'
+										data-aos-duration='1000'
+										data-aos-anchor-placement='center-bottom'>
+										{buttonText}
+									</Button>
+								</ButtonContainer>
+							)}
 						</Content>
 					</ColumnOne>
 					<ColumnTwo>

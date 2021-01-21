@@ -37,21 +37,10 @@ const Container = styled.div`
 `;
 
 const LogoRouter = styled(LinkRouter)`
-	color: ${(p) => (p.scrollvalue ? "#E1E2E2" : "transparent")}; // platinum
 	justify-self: flex-start;
 	cursor: pointer;
-	font-size: 42px;
 	display: flex;
 	align-items: center;
-	margin-left: 24px;
-	font-weight: bold;
-	text-decoration: none;
-	transition: 0.8s all ease;
-
-	@media screen and (max-width: 780px) {
-		margin-top: -10px;
-		font-size: 24px;
-	}
 `;
 
 const BurgerButton = styled.div`
@@ -99,6 +88,24 @@ const BurgerLinkScroll = styled(LinkScroll)`
 	}
 `;
 
+const Logo = styled.img`
+	height: 65px;
+	width: 65px;
+	transition: 0.8s all ease;
+	display: ${(p) => (p.scrollvalue ? "inline" : "none")};
+	/* margin-top: 1vh; */
+
+	/* @media screen and (max-width: 780px) {
+		height: 30px;
+		width: 30px;
+	}
+
+	@media screen and (max-width: 480px) {
+		height: 25px;
+		width: 25px;
+	} */
+`;
+
 const Nav = ({ toggle }) => {
 	const [scrollValue, setScrollValue] = useState(0);
 	const pages = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -123,8 +130,10 @@ const Nav = ({ toggle }) => {
 		<IconContext.Provider value={{ color: "#E1E2E2" }}>
 			<NavWrapper scrollvalue={scrollValue}>
 				<Container>
-					<LogoRouter scrollvalue={scrollValue} to='/' onClick={scrollHome}>
-						J/A
+					<LogoRouter to='/' onClick={scrollHome}>
+						<Logo
+							src={require("../../images/logo.png").default}
+							scrollvalue={scrollValue}></Logo>
 					</LogoRouter>
 					<BurgerButton onClick={toggle}>
 						<CgMenuRight />
@@ -137,7 +146,9 @@ const Nav = ({ toggle }) => {
 									exact='true'
 									smooth={true}
 									duration={500}
-									key={i}>
+									key={i}
+									// offset={page.toLowerCase() === "skills" ? "-20px" : "0"}
+								>
 									{page}
 								</BurgerLinkScroll>
 							</BurgerItem>
