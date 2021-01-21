@@ -201,7 +201,11 @@ const Hero = () => {
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
-				<Logo src={require("../../images/logo.png").default}></Logo>
+				<Logo
+					data-aos='zoom-in'
+					data-aos-duration='1000'
+					data-aos-once='true'
+					src={require("../../images/logo.png").default}></Logo>
 				<Typist avgTypingDelay={60} startDelay={500} onTypingDone={showArrow}>
 					<H1>JAKE ADDIS</H1>
 					<Typist.Delay ms={300} />
