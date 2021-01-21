@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Resume from "../../docs/Resume.pdf";
 
@@ -159,6 +159,16 @@ const Info = ({
 	portraitOrient,
 	buttonHide,
 }) => {
+	const [width, setWidth] = useState();
+
+	useEffect(() => {
+		setWidth(window.innerWidth);
+	}, []);
+
+	window.addEventListener("resize", () => {
+		setWidth(window.innerWidth);
+	});
+
 	return (
 		<Container darkBackground={darkBackground} id={id}>
 			<Wrapper>
@@ -191,7 +201,13 @@ const Info = ({
 									target='_blank'
 									href='https://www.codewars.com/users/jake-utk'>
 									<AltImg
-										src='https://www.codewars.com/users/jake-utk/badges/large'
+										src={
+											width > "600"
+												? "https://www.codewars.com/users/jake-utk/badges/large"
+												: width > "380"
+												? "https://www.codewars.com/users/jake-utk/badges/small"
+												: "https://www.codewars.com/users/jake-utk/badges/micro"
+										}
 										alt='codewars badge large'
 									/>
 								</AltContainer>
