@@ -11,7 +11,7 @@ const Container = styled.div`
 	display: flex;
 	height: 100vh;
 	justify-content: center;
-	padding: 0 28px;
+	padding: 0;
 	position: relative;
 	z-index: 1;
 
@@ -56,7 +56,6 @@ const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	max-width: 1200px;
-	padding: 8px 24px;
 	position: absolute;
 	z-index: 3;
 `;
@@ -66,6 +65,7 @@ const H1 = styled.h1`
 	font-size: 92px;
 	text-align: center;
 	font-family: "Teko";
+	display: none;
 
 	@media screen and (max-width: 780px) {
 		font-size: 80px;
@@ -73,6 +73,10 @@ const H1 = styled.h1`
 
 	@media screen and (max-width: 480px) {
 		font-size: 60px;
+	}
+
+	@media screen and (max-height: 480px) {
+		display: block;
 	}
 `;
 
@@ -82,6 +86,24 @@ const P = styled.p`
 	margin-top: 20px;
 	max-width: 600px;
 	text-align: center;
+	overflow-wrap: break-word;
+
+	@media screen and (max-width: 780px) {
+		font-size: 32px;
+	}
+
+	@media screen and (max-width: 480px) {
+		font-size: 20px;
+	}
+`;
+
+const P2 = styled.p`
+	color: #e1e2e2; // platinum
+	font-size: 40px;
+	margin: -20px;
+	max-width: 600px;
+	text-align: center;
+	overflow-wrap: break-word;
 
 	@media screen and (max-width: 780px) {
 		font-size: 32px;
@@ -96,8 +118,12 @@ const ArrowScroll = styled(Link)`
 	text-decoration: none;
 	cursor: pointer;
 	position: absolute;
-	bottom: 15%;
+	bottom: 10%;
 	z-index: 10;
+
+	@media screen and (max-height: 780px) {
+		bottom: 5%;
+	}
 `;
 
 const Arrow = styled(ImArrowDown)`
@@ -135,6 +161,33 @@ const Arrow = styled(ImArrowDown)`
 	}
 `;
 
+const Logo = styled.img`
+	height: 400px;
+	width: 400px;
+	margin-left: 2.5vw;
+
+	@media screen and (max-width: 780px) {
+		height: 300px;
+		width: 300px;
+		margin-left: 4vw;
+	}
+
+	@media screen and (max-width: 480px) {
+		margin-left: 20px;
+		height: 40vh;
+		width: 85vw;
+	}
+
+	@media screen and (max-height: 780px) {
+		height: 250px;
+		width: 250px;
+	}
+
+	@media screen and (max-height: 480px) {
+		display: none;
+	}
+`;
+
 const Hero = () => {
 	const [arrowVisibility, setArrowVisibility] = useState(0);
 
@@ -148,14 +201,15 @@ const Hero = () => {
 				<VideoImport autoPlay loop muted src={Video} type='video/mp4' />
 			</Background>
 			<Content>
+				<Logo src={require("../../images/logo.png").default}></Logo>
 				<Typist avgTypingDelay={60} startDelay={500} onTypingDone={showArrow}>
 					<H1>JAKE ADDIS</H1>
 					<Typist.Delay ms={300} />
 					<P>Software Engineer</P>
 					<Typist.Delay ms={300} />
-					<P>Nashville, TN</P>
+					<P2>Nashville, TN</P2>
 					<Typist.Backspace count={13} delay={300} />
-					<P>Remote</P>
+					<P2>Remote</P2>
 				</Typist>
 			</Content>
 			<ArrowScroll to='about' exact='true' smooth={true} duration={500}>
