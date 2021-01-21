@@ -45,8 +45,8 @@ const Wrapper = styled.div`
 const Content = styled.div`
 	max-width: 1000px;
 	display: grid;
-	grid-template-columns: repeat(2, 50vw);
-	grid-template-rows: repeat(4, 16vh) 32vh;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(4, 80px) 160px;
 	gap: 2vw;
 	text-align: center;
 	margin: 0 auto;
