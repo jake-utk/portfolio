@@ -45,8 +45,8 @@ const Wrapper = styled.div`
 const Content = styled.div`
 	max-width: 1000px;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(4, 80px) 160px;
+	grid-template-columns: repeat(2, 50vw);
+	grid-template-rows: repeat(4, 16vh) 32vh;
 	gap: 2vw;
 	text-align: center;
 	margin: 0 auto;
@@ -57,7 +57,7 @@ const Content = styled.div`
 	}
 
 	@media screen and (max-width: 1000px) {
-		grid-template-rows: 80px 260px 80px 80px 240px;
+		grid-template-rows: 10vh 40vh 10vh 10vh 20vh;
 		max-width: 100%;
 	}
 `;
@@ -79,6 +79,8 @@ const Box1 = styled.div`
 	grid-row: 1;
 	grid-column: 2;
 	background: none;
+	max-height: 10%;
+	justify-self: start;
 
 	@media screen and (max-width: 1000px) {
 		width: 90%;
@@ -100,14 +102,12 @@ const Box2 = styled.div`
 	background: none;
 	justify-self: center;
 	align-self: center;
-	min-height: 250px;
-	min-width: 450px;
+	max-height: 40vh;
 
 	@media screen and (max-width: 1000px) {
 		grid-row: 2;
 		grid-column: 1 / span 2;
 		width: 90%;
-		min-width: 250px;
 		min-height: 100px;
 	}
 `;
@@ -223,12 +223,20 @@ const Button = styled.a`
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
 
+	/* @media screen and (max-height: 800px) {
+		padding: 0;
+	} */
+
 	@media screen and (max-width: 1000px) {
 		padding: 0;
 	}
 
 	@media screen and (max-width: 780px) {
 		font-size: 22px;
+	}
+
+	@media screen and (max-width: 480px) {
+		font-size: 18px;
 	}
 
 	&:hover {
@@ -261,23 +269,9 @@ const Description = styled.p`
 
 const SkillsIcon = css`
 	color: #e1e2e2; // platinum
-	height: 65px;
-	width: 65px;
+	height: 8vh;
+	width: 8vh;
 	padding: 1vh 0;
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
-
-	@media screen and (max-width: 1000px) {
-		/* height: 75px;
-		width: 75px; */
-	}
-
-	@media screen and (max-width: 300px) {
-		height: 40px;
-		width: 40px;
-	}
 
 	&:hover {
 		/* color: #f58549; // mango tango */

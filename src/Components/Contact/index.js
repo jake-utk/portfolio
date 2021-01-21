@@ -82,6 +82,10 @@ const FormButton = styled.button`
 	transition: all 0.2s ease-in-out;
 	text-decoration: none;
 
+	@media screen and (max-height: 800px) {
+		padding: 5px 10px;
+	}
+
 	&:hover {
 		transition: all 0.2s ease-in-out;
 		background: #646c79; // black coral / conditional
