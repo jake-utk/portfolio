@@ -146,7 +146,9 @@ const Nav = ({ toggle }) => {
 									exact='true'
 									smooth={true}
 									duration={500}
-									key={i}>
+									key={i}
+									// offset={page.toLowerCase() === "skills" ? "-20px" : "0"}
+								>
 									{page}
 								</BurgerLinkScroll>
 							</BurgerItem>

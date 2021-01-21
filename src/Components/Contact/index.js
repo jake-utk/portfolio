@@ -157,7 +157,7 @@ const Contact = () => {
 							form='nameform'
 							onChange={(event) => setName(event.target.value)}
 							value={name}
-							defaultValue='You'
+							// defaultValue='You'
 						/>
 						<Label htmlFor='email'>Email:</Label>
 						<InputTextInput
@@ -168,7 +168,7 @@ const Contact = () => {
 							form='emailform'
 							onChange={(event) => setEmail(event.target.value)}
 							value={email}
-							defaultValue='hiring@company.com'
+							// defaultValue='hiring@company.com'
 						/>
 						<Label htmlFor='message'>Message:</Label>
 						<InputTextArea
@@ -179,12 +179,17 @@ const Contact = () => {
 							form='detailsform'
 							onChange={(event) => setContact(event.target.value)}
 							value={contact}
-							defaultValue='We want to hire you!  When can you start?'
+							// defaultValue='We want to hire you!  When can you start?'
 						/>
 						<FormButton type='submit'>Send</FormButton>
 					</Form>
 					<ImgContainer>
-						<Img src={Image} />
+						<Img
+							src={Image}
+							data-aos='zoom-in'
+							data-aos-duration='1000'
+							data-aos-anchor-placement='center bottom'
+						/>
 					</ImgContainer>
 				</Content>
 			</Wrapper>

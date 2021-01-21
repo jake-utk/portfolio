@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { animateScroll as Scroll } from "react-scroll";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
+import { GoArrowUp } from "react-icons/go";
 
 const Container = styled.footer`
 	background-color: #1d2228;
@@ -38,21 +39,33 @@ const SocialWrapper = styled.div`
 	}
 `;
 
-const Logo = styled(Link)`
-	color: #e1e2e2; // platinum
-	justify-self: start;
+const ArrowScroll = styled(Link)`
 	cursor: pointer;
-	text-decoration: none;
-	font-size: 1.5rem;
+	justify-self: start;
 	display: flex;
 	align-items: center;
 	margin-bottom: 16px;
-	font-weight: bold;
 
+	@media screen and (max-height: 780px) {
+		bottom: 5%;
+	}
 	&:hover {
 		color: #9b1d20; // ruby red
 		transform: scale(1.2);
 		transition: 0.3s ease-out;
+	}
+`;
+
+const Arrow = styled(GoArrowUp)`
+	color: #e1e2e2;
+	height: 40px;
+	width: 40px;
+	transition: opacity 200ms, color 2s, height 2s, width 2s;
+
+	&:hover {
+		color: #f58549;
+		height: 60px;
+		width: 60px;
 	}
 `;
 
@@ -100,9 +113,9 @@ const Footer = () => {
 			<Wrapper>
 				<SocialMedia>
 					<SocialWrapper>
-						<Logo to='/' onClick={scrollHome}>
-							J/A
-						</Logo>
+						<ArrowScroll to='/' onClick={scrollHome}>
+							<Arrow />
+						</ArrowScroll>
 						<Copyright>
 							© {new Date().getFullYear()} All Rights Reserved
 						</Copyright>
