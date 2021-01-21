@@ -208,7 +208,10 @@ const Info = ({
 												? "https://www.codewars.com/users/jake-utk/badges/small"
 												: "https://www.codewars.com/users/jake-utk/badges/micro"
 										}
-										alt='codewars badge large'
+										alt='codewars badge'
+										data-aos='zoom-in'
+										data-aos-duration='1000'
+										data-aos-anchor-placement='center-bottom'
 									/>
 								</AltContainer>
 							) : (
