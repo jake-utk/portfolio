@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Image from "../../images/undraw1.svg";
 
@@ -131,9 +131,9 @@ const Img = styled.img`
 `;
 
 const Contact = () => {
-	const [contact, setContact] = useState();
-	const [name, setName] = useState();
-	const [email, setEmail] = useState();
+	// const [contact, setContact] = useState();
+	// const [name, setName] = useState();
+	// const [email, setEmail] = useState();
 
 	return (
 		<Container id='contact'>
@@ -152,22 +152,20 @@ const Contact = () => {
 						<InputTextInput
 							name='name'
 							type='text'
-							rows='3'
-							id='name'
-							form='nameform'
-							onChange={(event) => setName(event.target.value)}
-							value={name}
+							// id='name'
+							// form='nameform'
+							// onChange={(event) => setName(event.target.value)}
+							// value={name}
 							// defaultValue='You'
 						/>
 						<Label htmlFor='email'>Email:</Label>
 						<InputTextInput
 							type='email'
-							rows='3'
 							name='email'
-							id='email'
-							form='emailform'
-							onChange={(event) => setEmail(event.target.value)}
-							value={email}
+							// id='email'
+							// form='emailform'
+							// onChange={(event) => setEmail(event.target.value)}
+							// value={email}
 							// defaultValue='hiring@company.com'
 						/>
 						<Label htmlFor='message'>Message:</Label>
@@ -175,10 +173,10 @@ const Contact = () => {
 							type='text'
 							rows='8'
 							name='details'
-							id='details'
-							form='detailsform'
-							onChange={(event) => setContact(event.target.value)}
-							value={contact}
+							// id='details'
+							// form='detailsform'
+							// onChange={(event) => setContact(event.target.value)}
+							// value={contact}
 							// defaultValue='We want to hire you!  When can you start?'
 						/>
 						<FormButton type='submit'>Send</FormButton>
