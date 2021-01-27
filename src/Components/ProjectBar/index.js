@@ -269,9 +269,11 @@ const Description = styled.p`
 
 const SkillsIcon = css`
 	color: #e1e2e2; // platinum
+	max-height: 100%;
+	max-width: 100%;
 	height: 8vh;
 	width: 8vh;
-	padding: 1vh 0;
+	padding: 1.5vh 0;
 
 	&:hover {
 		/* color: #f58549; // mango tango */
