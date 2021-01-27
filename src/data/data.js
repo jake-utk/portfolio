@@ -71,7 +71,7 @@ export const infoOne = {
 	introText: "thanks for checking out my portfolio.",
 	h1Text: "I'm a software engineer",
 	descText:
-		"...who enjoys using logic to solve problems with code.  I design object-oriented, use-centric, and responsive applications that bring a business's idea to life.  I'm currently seeking full time employment!",
+		"...who enjoys using logic to solve problems with code.  I design object-oriented, user-centric, and responsive applications that bring a business's idea to life.  I'm currently seeking full time employment!",
 	buttonText: "Resume",
 	imageStart: false,
 	image: ImageOne,
