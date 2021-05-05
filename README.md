@@ -4,7 +4,7 @@
 - A personal webspace to display resume, github links, project summaries, upcoming initiatives, etc.
 
 ## Project Link
-- TBD - not yet hosted
+- www.jakeaddis.com
 
 ## User Stories for MVP
 - As a user, I would like to see a link to a resume that opens in a different tab, so I don't have to hit the "back" button to return to the page.
